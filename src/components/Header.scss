@@ -1,0 +1,19 @@
+@import "../styles/main";
+
+.Header {
+  border-top: 5px solid $color-brand;
+  color: $color-inky;
+
+  .Header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+    padding: $spacing-lg $spacing-sm;
+  }
+
+  .Header-logo {
+    height: 100px;
+  }
+}
