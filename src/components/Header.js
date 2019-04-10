@@ -6,11 +6,11 @@ import "./Header.scss";
 
 import logo from "./logo.svg";
 
-const Header = ({ siteTitle }) => (
+const Header = ({ title }) => (
   <header className="Header">
     <div className="Header-content">
       <Link to="/">
-        <img alt="" src={logo} className="Header-logo" />
+        <img alt={title} src={logo} className="Header-logo" />
       </Link>
       <nav>
         <Link to="/blog">Blog</Link>

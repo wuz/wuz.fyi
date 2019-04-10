@@ -1,0 +1,91 @@
+/* TOOL VARIABLES */
+$browser-context: 16; // Default
+
+/* FUNCTIONS */
+
+/*
+  * pow() - raise a number to an exponent
+  * $number - the number to raise to the exponent
+  * $exponent - the exponent to rais number to
+  * Example: pow(2, 3) === 2^3 === 8
+*/
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+/*
+  * em() - convert a pixel value to ems
+  * $pixels - the pixel size of the element
+  * $context - the size that 1em should be, default: 16px per browser convention
+  * Example: em(16) === 16px/16px === 1em
+*/
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+/*
+ * _gettypescale() - internal function to calculate type scale
+ * $n - the step in the typescale to return
+ * Example: _gettypescale(1) === 12px
+ * Scale:
+ *  1 === 12px
+ *  2 === 14px
+ *  3 === 16px
+ *  4 === 18px
+ *  5 === 20px
+ *  6 === 24px
+ *  7 === 28px
+ *  8 === 32px
+ *  9 === 36px
+ * More Information:
+ * This scale is calculated using the following formula:
+ * Ex: Step = 7
+ * Take the step in the scale, subtract 2 and divide by 4
+ * Ex: (7-2)/4 === 1.25
+ * Round down from that number
+ * Ex: 1.25 -> 1
+ * Add 1 and multiply by 2
+ * Ex: (1+1) * 2 === 4
+ * Add the result of the formula for the previous step
+ * Ex: 4 + _gettypescale(6) === 4 + 24 === 28
+ * If the step is equal to one, return 12
+ * Typescale calculator can be found here:
+ * https://s.codepen.io/wuz/full/RdVOgG/yPkJjXZmegek
+*/
+@function _gettypescale($step) {
+  @if $step == 1 {
+    @return 12;
+  } @else {
+    @return ((floor(($step - 2)/4) + 1) * 2) + _gettypescale($step - 1);
+  }
+}
+
+/*
+ * typescale() - return the typescale system as a pixel or em
+ * $step - step of the typescale to return
+ * $em - boolean to determine if em values are returned - default false
+ * Example: typescale(2, false) === 14px
+*/
+@function typescale($step: 1, $em: false) {
+  @if $em {
+    @return em(_gettypescale($step));
+  } @else {
+    @return #{_gettypescale($step)}px;
+  }
+}

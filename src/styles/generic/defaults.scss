@@ -1,0 +1,14 @@
+body {
+  font-family: $main-font;
+  background-color: $color-sky-light;
+  color: $color-inky-light;
+}
+
+a {
+  color: $color-inky;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-brand;
+  }
+}

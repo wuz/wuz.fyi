@@ -1,0 +1,20 @@
+$main-font: "Public Sans";
+
+/* COLORS */
+$color-brand: #f5c3ff;
+
+$color-inky-light: #2a2d46;
+$color-inky: #1d1f30;
+$color-inky-dark: #191b2a;
+
+$color-sky-light: #f8f9fb;
+$color-sky: #eff0f6;
+$color-sky-dark: #e2e4ee;
+
+/* SPACING */
+$unit: 2;
+$spacing-xs: pow($unit, 2) * 1px; // 4px
+$spacing-sm: pow($unit, 3) * 1px; // 8px
+$spacing-md: pow($unit, 4) * 1px; // 16px
+$spacing-lg: pow($unit, 5) * 1px; // 32px
+$spacing-xl: pow($unit, 6) * 1px; // 64px
