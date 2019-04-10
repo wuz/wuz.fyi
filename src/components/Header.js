@@ -4,14 +4,15 @@ import React from "react";
 
 import "./Header.scss";
 
-import logo from "./logo.svg";
+import Logo from "./Logo";
 
 const Header = ({ title }) => (
   <header className="Header">
     <div className="Header-content">
-      <Link to="/">
-        <img alt={title} src={logo} className="Header-logo" />
+      <Link to="/" className="Header-logoLink">
+        <Logo alt={title} className="Header-logo" />
       </Link>
+
       <nav>
         <Link to="/blog">Blog</Link>
       </nav>

@@ -18,3 +18,9 @@ $spacing-sm: pow($unit, 3) * 1px; // 8px
 $spacing-md: pow($unit, 4) * 1px; // 16px
 $spacing-lg: pow($unit, 5) * 1px; // 32px
 $spacing-xl: pow($unit, 6) * 1px; // 64px
+
+/* SHADOWS */
+$shadow-main: 1px 4px 10px rgba($color-inky, 0.25);
+
+/* BREAKPOINTS */
+$breakpoint-sm: 468px;

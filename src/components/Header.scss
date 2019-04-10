@@ -1,19 +1,32 @@
 @import "../styles/main";
 
 .Header {
-  border-top: 5px solid $color-brand;
   color: $color-inky;
 
   .Header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
-    padding: $spacing-lg $spacing-sm;
+    padding: $spacing-lg $spacing-md;
+  }
+
+  .Header-logoLink {
+    border: 0;
   }
 
   .Header-logo {
-    height: 100px;
+    width: 100px;
+    fill: $color-inky;
+
+    .dark-mode & {
+      fill: $color-sky;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 50px;
+    }
   }
 }

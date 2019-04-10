@@ -1,0 +1,44 @@
+.ColorSwitch-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColorSwitch {
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  font-size: 20px;
+  padding: 2px 0;
+  margin-top: 24px;
+  position: relative;
+  border: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.ColorSwitch:focus {
+  border-bottom-color: #191b2a;
+}
+
+.ColorSwitch:before {
+  content: "🌎";
+  display: block;
+  /* height: 15px; */
+  /* width: 15px; */
+  position: absolute;
+  top: 2px;
+  /* background-color: #eff0f6; */
+  transition: transform 0.2s;
+  transform: translateX(0px);
+}
+
+body.dark-mode .ColorSwitch:focus {
+  border-bottom-color: #eff0f6;
+}
+
+body.dark-mode .ColorSwitch:before {
+  /* background-color: #191b2a; */
+  transform: translateX(100%);
+}

@@ -1,0 +1,73 @@
+@import "../styles/main";
+
+.BlogPost {
+  h1 {
+    font-size: typescale(9);
+  }
+  h2 {
+    font-size: typescale(8);
+  }
+  h3 {
+    font-size: typescale(7);
+  }
+  h4 {
+    font-size: typescale(6);
+  }
+  h5 {
+    font-size: typescale(5);
+  }
+  h6 {
+    font-size: typescale(4);
+  }
+
+  p {
+    line-height: 1.25;
+    margin-bottom: $spacing-md;
+    max-width: 50em;
+  }
+
+  img {
+    display: inline-block;
+    max-width: 50vw;
+    width: 100%;
+  }
+
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid $color-brand;
+    margin: 0;
+    padding: $spacing-sm;
+    margin-bottom: $spacing-md;
+  }
+
+  figure {
+    max-width: 50vw;
+    width: 100%;
+    text-align: center;
+    background: lighten($color-sky-dark, 5);
+    margin: $spacing-sm auto;
+    padding: $spacing-md;
+    border-radius: 2px;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      max-width: 100%;
+    }
+  }
+
+  figure img {
+    box-shadow: $shadow-main;
+    max-width: 100%;
+  }
+
+  figure p {
+    text-align: center;
+    margin: 0;
+    margin-bottom: $spacing-md;
+  }
+
+  figcaption {
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+  }
+}

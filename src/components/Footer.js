@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./Footer.scss";
+
 const Footer = () => (
   <footer className="Footer">
-    © {new Date().getFullYear()}, Built with
+    © Wuz {new Date().getFullYear()}, Built with
     {` `}
     <a href="https://www.gatsbyjs.org">Gatsby</a>
   </footer>

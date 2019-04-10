@@ -1,14 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: $main-font;
   background-color: $color-sky-light;
   color: $color-inky-light;
+
+  &.dark-mode {
+    color: $color-sky-light;
+    background-color: $color-inky-light;
+  }
 }
 
 a {
   color: $color-inky;
   text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  .dark-mode & {
+    color: $color-sky;
+  }
 
   &:hover {
     color: $color-brand;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $color-sky-dark;
+
+  .dark-mode & {
+    border-color: $color-inky-light;
   }
 }
