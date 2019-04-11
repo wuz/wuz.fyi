@@ -10,7 +10,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-feed-generator`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
