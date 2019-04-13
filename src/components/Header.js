@@ -9,7 +9,7 @@ import Logo from "./Logo";
 const Header = ({ title }) => (
   <header className="Header">
     <div className="Header-content">
-      <Link to="/" className="Header-logoLink">
+      <Link to="/" className="Header-logoLink no-border">
         <Logo alt={title} className="Header-logo" />
       </Link>
 

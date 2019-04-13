@@ -3,3 +3,13 @@
 .Container {
   border-top: 5px solid $color-brand;
 }
+
+.BlogPagination {
+  display: flex;
+  list-style: none;
+  padding: $spacing-md 0;
+  margin: 0;
+  li {
+    width: 50%;
+  }
+}

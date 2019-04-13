@@ -77,9 +77,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             : [],
         )
         .concat(meta)}
-    >
-      <script src="/dark-mode.js" />
-    </Helmet>
+    />
   );
 }
 

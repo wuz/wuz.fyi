@@ -7,24 +7,23 @@
 
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import Image from "gatsby-image";
+import Text from "./Text";
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata;
+        const { author } = data.site.siteMetadata;
         return (
           <div>
-            <p>
-              Written by <strong>{author}</strong> who lives in Indianapolis and
-              builds front-end things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow @CallMeWuz on Twitter
-              </a>
-            </p>
+            <Text>
+              Howdy, I'm <strong>Wuz</strong> (aka {author}). I live and work in
+              Indianapolis, building accessible, performant frontends.
+              <br />
+              I'm fascinated in the internet and the relationships between code,
+              art, and community.
+            </Text>
           </div>
         );
       }}
@@ -37,9 +36,6 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
-        social {
-          twitter
-        }
       }
     }
   }

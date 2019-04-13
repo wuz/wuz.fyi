@@ -12,6 +12,7 @@ body {
   font-family: $main-font;
   background-color: $color-sky-light;
   color: $color-inky-light;
+  font-size: 20px;
 
   &.dark-mode {
     color: $color-sky-light;
@@ -19,17 +20,27 @@ body {
   }
 }
 
+strong {
+  font-weight: 700;
+}
+
 a {
   color: $color-inky;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  color: $color-brand-dark;
+  border-bottom: 2px solid $color-brand-dim;
+  transition: border-color 0.2s ease-in-out;
 
   .dark-mode & {
-    color: $color-sky;
+    color: $color-brand;
+
+    &:hover {
+      border-bottom: 2px solid $color-brand;
+    }
   }
 
   &:hover {
-    color: $color-brand;
+    border-bottom: 2px solid $color-brand-dark;
   }
 }
 
@@ -39,5 +50,13 @@ hr {
 
   .dark-mode & {
     border-color: $color-inky-light;
+  }
+}
+
+a.no-border {
+  border: 0;
+
+  &:hover {
+    border: 0;
   }
 }

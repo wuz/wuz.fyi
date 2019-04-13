@@ -1,5 +1,23 @@
-@import "../styles/main";
+@import "../styles/ats/tools";
+@import "../styles/ats/settings";
 
 .Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: $spacing-md;
+
+  .Footer-divider:after {
+    content: "";
+    display: inline-block;
+    height: 1.5em;
+    margin: 0 $spacing-md;
+    width: 0;
+    border-right: 2px solid $color-inky-light;
+
+    .dark-mode & {
+      border-right: 2px solid $color-sky-dark;
+    }
+  }
 }

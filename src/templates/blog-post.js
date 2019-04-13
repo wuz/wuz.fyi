@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Title from "../components/Title";
@@ -22,9 +21,8 @@ class BlogPostTemplate extends React.Component {
         <p>{post.frontmatter.date}</p>
         <BlogPost dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-        <Bio />
 
-        <ul>
+        <ul className="BlogPagination">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

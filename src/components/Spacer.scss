@@ -1,0 +1,22 @@
+@import "../styles/ats/tools";
+@import "../styles/ats/settings";
+
+.Spacer {
+  display: block;
+
+  &.Spacer--xs {
+    height: $spacing-xs;
+  }
+  &.Spacer--sm {
+    height: $spacing-sm;
+  }
+  &.Spacer--md {
+    height: $spacing-md;
+  }
+  &.Spacer--lg {
+    height: $spacing-lg;
+  }
+  &.Spacer--xl {
+    height: $spacing-xl;
+  }
+}

@@ -15,7 +15,12 @@ const ColorSwitch = () => {
         onClick={darkMode.toggle}
         aria-label="Toggle Dark Mode"
       >
-        🌝🌞
+        <span role="img" aria-label="dark mode">
+          🌝
+        </span>
+        <span role="img" aria-label="light mode">
+          🌞
+        </span>
       </button>
     </div>
   );

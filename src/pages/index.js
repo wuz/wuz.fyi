@@ -3,39 +3,49 @@ import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
-import Title from "../components/Title";
+import Spacer from "../components/Spacer";
+import Text from "../components/Text";
 import SEO from "../components/seo";
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
     const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[
+            `blog`,
+            `developer`,
+            `software engineer`,
+            `javascript`,
+            `react`,
+          ]}
         />
         <Bio />
-        <Title>Recent Posts</Title>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          );
-        })}
+        <Spacer size="lg" />
+        <Text>
+          building frontends at <a href="https://lessonly.com">Lessonly</a>
+          <br />
+          <small>
+            Previously at <a href="https://mimirhq.com">Mimir</a>
+          </small>
+        </Text>
+        <Spacer size="lg" />
+        <Text>
+          built <a href="https://dankneon.com">Dank Neon</a>,{" "}
+          <a href="https://botsin.space/@ajjbot">AJJ Bot</a>,{" "}
+          <a href="https://picdance.party">Picdance</a>, and{" "}
+          <a href="https://github.com/wuz/all_google_fonts">all google fonts</a>
+        </Text>
+        <Spacer size="lg" />
+        <Text>
+          founded <a href="https://www.f6s.com/tebogollc">Tebogo</a> once upon a
+          time
+        </Text>
+        <Spacer size="lg" />
       </Layout>
     );
   }
@@ -48,21 +58,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
       }
     }
   }
