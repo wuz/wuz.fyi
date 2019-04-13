@@ -2,7 +2,8 @@
 title: Become an accessibility rock-star! 🤘
 date: "2019-04-09T22:40:32.169Z"
 description: A quick introduction to how you can start rocking at accessibility!
-tags: a11y, beginner,
+tags: a11y, beginner
+draft: false
 ---
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.

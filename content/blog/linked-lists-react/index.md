@@ -4,6 +4,7 @@ date: "2019-04-11T22:40:32.169Z"
 description: Under the hood, React hooks utilize a linked list. Here's why.
 cover_image: https://thepracticaldev.s3.amazonaws.com/i/rcglra25frobt2r6yipz.jpg
 tags: beginner, datastructures, react, javascript
+draft: false
 ---
 
 I was digging into some of the code for React hooks the other day, right after reading Ali's great post on linked lists:

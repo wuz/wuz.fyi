@@ -1,6 +1,7 @@
 ---
 title: Getting started with Deno
 date: "2019-04-12T16:46:32.169Z"
+draft: true
 description: A new runtime for Javascript and Typescript from the founder of Node
 tags: beginner, datastructures, react, javascript
 ---
