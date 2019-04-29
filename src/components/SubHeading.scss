@@ -2,10 +2,11 @@
 @import "../styles/ats/settings";
 
 .SubHeading {
-  font-size: typescale(5);
-  font-weight: 500;
+  font-size: typescale(4);
+  font-weight: 700;
   text-transform: uppercase;
   color: $color-inky-lighter;
+  margin-top: 0;
 
   .dark-mode & {
     color: $color-sky-lighter;

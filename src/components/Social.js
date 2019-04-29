@@ -12,22 +12,25 @@ const Social = () => {
         return (
           <div className="Social">
             <a
+              aria-label="Follow me on Twitter"
               className="no-border"
               href={`https://twitter.com/${social.twitter}`}
             >
-              <Icon alt="Follow me on Twitter" name="twitter" />
+              <Icon alt="" name="twitter" />
             </a>
             <a
+              aria-label="View my work on Github"
               className="no-border"
               href={`https://github.com/${social.github}`}
             >
-              <Icon alt="View my work on Github" name="github" />
+              <Icon alt="" name="github" />
             </a>
             <a
+              aria-label="Add me on LinkedIn"
               className="no-border"
               href={`https://linkedin.com/in/${social.linkedin}`}
             >
-              <Icon alt="Add me on LinkedIn" name="linkedin" />
+              <Icon alt="" name="linkedin" />
             </a>
           </div>
         );

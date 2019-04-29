@@ -7,12 +7,34 @@
   margin-top: -1 * $spacing-lg;
   border-bottom: 1px solid $color-inky-lighter;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 100%;
+  padding-top: $spacing-lg;
+
+  @media screen and (max-width: $breakpoint-md) {
+    align-items: center;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .Header-content {
-    padding: $spacing-lg;
+    font-size: typescale(6);
+    padding-top: $spacing-lg;
+    padding-right: $spacing-lg;
+    padding-bottom: $spacing-lg;
+
+    @media screen and (max-width: $breakpoint-md) {
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      text-align: center;
+    }
+
     p {
       margin-bottom: 0;
     }
@@ -21,7 +43,15 @@
   .Header-logoLink {
     border: 0;
     padding-top: $spacing-lg;
-    border-right: 1px solid $color-inky-lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    flex: 1 0 25%;
+
+    @media screen and (max-width: $breakpoint-md) {
+      border: none;
+    }
 
     .dark-mode &:hover {
       border: 0;
@@ -29,7 +59,8 @@
   }
 
   .Header-logo {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     fill: $color-inky;
     padding: $spacing-lg;
 
@@ -44,7 +75,8 @@
     }
 
     @media screen and (max-width: $breakpoint-sm) {
-      width: 50px;
+      width: 100px;
+      padding: 0;
     }
   }
 }

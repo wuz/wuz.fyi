@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: $spacing-lg;
-  top: $spacing-lg;
+  right: $spacing-md;
+  top: $spacing-md;
 }
 
 .ColorSwitch {
@@ -20,6 +20,7 @@
   position: relative;
   border: 0;
   border-bottom: 3px solid transparent;
+  cursor: pointer;
 }
 
 .ColorSwitch:focus {

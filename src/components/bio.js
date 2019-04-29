@@ -12,7 +12,7 @@ function Bio() {
         const { author } = data.site.siteMetadata;
         return (
           <div>
-            <Heading>Wuz</Heading>
+            <Heading>Howdy, I'm Wuz</Heading>
             <SubHeading>A.K.A. {author}</SubHeading>
             <Text>I build accessible, performant frontends.</Text>
           </div>

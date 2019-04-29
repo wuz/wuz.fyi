@@ -1,8 +1,22 @@
 @import "../styles/main";
 
 .Container {
-  padding: $spacing-sm;
-  border-top: 5px solid $color-brand;
+  padding: 0 $spacing-md;
+
+  &:before {
+    height: 5px;
+    background: $color-brand;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-top: $spacing-md;
+  }
 }
 
 .BlogPagination {
