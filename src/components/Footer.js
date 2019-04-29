@@ -6,9 +6,10 @@ import "./Footer.scss";
 
 const Footer = () => (
   <footer className="Footer">
-    <div>© Wuz {new Date().getFullYear()}</div>
-    <div className="Footer-divider" />
-    <Social />
+    <div className="Footer-content">
+      <div>© Wuz {new Date().getFullYear()}</div>
+      <Social />
+    </div>
   </footer>
 );
 

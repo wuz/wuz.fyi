@@ -1,6 +1,7 @@
 @import "../styles/main";
 
 .Container {
+  padding: $spacing-sm;
   border-top: 5px solid $color-brand;
 }
 

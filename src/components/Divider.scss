@@ -1,0 +1,8 @@
+@import "../styles/ats/tools";
+@import "../styles/ats/settings";
+
+.Divider {
+  padding-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
+  border-bottom: 1px solid $color-inky-lighter;
+}

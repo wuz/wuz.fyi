@@ -23,9 +23,9 @@ class Layout extends React.Component {
           <script src="https://unpkg.com/feather-icons" />
           <script src="/dark-mode.js" />
         </Helmet>
-        <ColorSwitch />
         <Header title={title} />
         <Main>{children}</Main>
+        <ColorSwitch />
         <Footer />
       </div>
     );

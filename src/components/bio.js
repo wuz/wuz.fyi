@@ -1,13 +1,8 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Text from "./Text";
+import Heading from "./Heading";
+import SubHeading from "./SubHeading";
 
 function Bio() {
   return (
@@ -17,13 +12,9 @@ function Bio() {
         const { author } = data.site.siteMetadata;
         return (
           <div>
-            <Text>
-              Howdy, I'm <strong>Wuz</strong> (aka {author}). I live and work in
-              Indianapolis, building accessible, performant frontends.
-              <br />
-              I'm fascinated in the internet and the relationships between code,
-              art, and community.
-            </Text>
+            <Heading>Wuz</Heading>
+            <SubHeading>A.K.A. {author}</SubHeading>
+            <Text>I build accessible, performant frontends.</Text>
           </div>
         );
       }}

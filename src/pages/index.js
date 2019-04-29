@@ -1,13 +1,14 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Spacer from "../components/Spacer";
 import Text from "../components/Text";
+import Divider from "../components/Divider";
+import List, { ListItem } from "../components/List";
 import SEO from "../components/seo";
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const { data } = this.props;
     const siteTitle = data.site.siteMetadata.title;
@@ -15,17 +16,23 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title="Welcome!"
           keywords={[
             `blog`,
             `developer`,
             `software engineer`,
             `javascript`,
             `react`,
+            `accessibility`,
           ]}
         />
-        <Bio />
         <Spacer size="lg" />
+        <List>
+          <ListItem>
+            <a href="https://dankneon.com">Dank Neon</a>
+          </ListItem>
+        </List>
+        <Divider />
         <Text>
           building frontends at <a href="https://lessonly.com">Lessonly</a>
           <br />
@@ -51,7 +58,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex;
+export default Index;
 
 export const pageQuery = graphql`
   query {

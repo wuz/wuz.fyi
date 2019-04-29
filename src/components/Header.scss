@@ -2,25 +2,36 @@
 @import "../styles/ats/settings";
 
 .Header {
-  color: $color-inky;
+  max-width: $main-width;
+  margin: 0 auto;
+  margin-top: -1 * $spacing-lg;
+  border-bottom: 1px solid $color-inky-lighter;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
 
   .Header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    padding: $spacing-lg $spacing-md;
+    padding: $spacing-lg;
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .Header-logoLink {
     border: 0;
+    padding-top: $spacing-lg;
+    border-right: 1px solid $color-inky-lighter;
+
+    .dark-mode &:hover {
+      border: 0;
+    }
   }
 
   .Header-logo {
-    width: 100px;
+    width: 200px;
     fill: $color-inky;
+    padding: $spacing-lg;
 
     &:hover {
       .logo-fill {

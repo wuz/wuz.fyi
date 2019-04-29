@@ -10,12 +10,12 @@ html {
 
 body {
   font-family: $main-font;
-  background-color: $color-sky-light;
+  background-color: $color-sky-lighter;
   color: $color-inky-light;
   font-size: 20px;
 
   &.dark-mode {
-    color: $color-sky-light;
+    color: $color-sky-lighter;
     background-color: $color-inky-light;
   }
 }

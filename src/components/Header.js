@@ -1,21 +1,18 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-
+import Bio from "./Bio";
 import "./Header.scss";
 
 import Logo from "./Logo";
 
 const Header = ({ title }) => (
   <header className="Header">
+    <Link to="/" className="Header-logoLink">
+      <Logo alt={title} className="Header-logo" />
+    </Link>
     <div className="Header-content">
-      <Link to="/" className="Header-logoLink no-border">
-        <Logo alt={title} className="Header-logo" />
-      </Link>
-
-      <nav>
-        <Link to="/blog">Blog</Link>
-      </nav>
+      <Bio />
     </div>
   </header>
 );

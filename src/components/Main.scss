@@ -2,8 +2,7 @@
 @import "../styles/ats/settings";
 
 .Main {
-  max-width: 960px;
+  max-width: $main-width;
   width: 100%;
   margin: 0 auto;
-  padding: $spacing-lg $spacing-md;
 }

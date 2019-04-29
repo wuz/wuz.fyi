@@ -1,14 +1,16 @@
 $main-font: "Public Sans";
 
 /* COLORS */
-$color-brand-dark: #9b49ab;
-$color-brand: #f5c3ff;
-$color-brand-dim: rgba(#f5c3ff, 0.5);
+$color-brand-dark: darken(#5c95ff, 0.5);
+$color-brand: #5c95ff;
+$color-brand-dim: rgba(#5c95ff, 0.5);
 
+$color-inky-lighter: #7d8b98;
 $color-inky-light: #2a2d46;
 $color-inky: #1d1f30;
 $color-inky-dark: #191b2a;
 
+$color-sky-lighter: #ffffff;
 $color-sky-light: #f8f9fb;
 $color-sky: #eff0f6;
 $color-sky-dark: #e2e4ee;
@@ -26,3 +28,6 @@ $shadow-main: 1px 4px 10px rgba($color-inky, 0.25);
 
 /* BREAKPOINTS */
 $breakpoint-sm: 468px;
+
+/* SIZES */
+$main-width: 768px;

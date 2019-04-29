@@ -1,0 +1,30 @@
+@import "../styles/ats/tools";
+@import "../styles/ats/settings";
+
+.List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1em;
+  //   list-style-type: square;
+  .ListItem {
+    line-height: 1.2;
+    &:before {
+      color: $color-inky-lighter;
+      /* color of bullet or square */
+
+      content: "◼";
+      /* Unicode of character to precede the list item */
+
+      font-size: 0.7em;
+      /* em or %*/
+
+      padding-right: 0.3em;
+      /* use em*/
+
+      position: relative;
+      top: -0.25em;
+      /* use em or % */
+    }
+  }
+}

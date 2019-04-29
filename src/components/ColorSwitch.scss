@@ -1,8 +1,13 @@
+@import "../styles/ats/tools";
+@import "../styles/ats/settings";
+
 .ColorSwitch-container {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  right: $spacing-lg;
+  top: $spacing-lg;
 }
 
 .ColorSwitch {
@@ -12,7 +17,6 @@
   background: none;
   font-size: 20px;
   padding: 2px 0;
-  margin-top: 24px;
   position: relative;
   border: 0;
   border-bottom: 3px solid transparent;
