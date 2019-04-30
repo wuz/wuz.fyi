@@ -62,7 +62,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        // this base query will be merged with any queries in each feed
         query: `
           {
             site {
@@ -110,8 +109,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Gatsby RSS Feed",
+            output: "/feed.xml",
+            title: "wuz.fyi RSS Feed",
           },
         ],
       },
