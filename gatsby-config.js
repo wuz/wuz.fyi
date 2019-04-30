@@ -3,7 +3,7 @@ module.exports = {
     title: `Howdy, I'm Wuz.`,
     author: `Conlin Durbin`,
     description: `Software engineer working on Lessonly`,
-    siteUrl: `https://new.wuz.fyi`,
+    siteUrl: `https://wuz.fyi`,
     social: {
       twitter: `CallMeWuz`,
       linkedin: `wuz`,
@@ -53,9 +53,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-fathom",
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingUrl: "159.65.189.122",
+        siteId: "BFIEQ",
       },
     },
     {
