@@ -55,7 +55,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-fathom",
       options: {
-        trackingUrl: "159.65.189.122",
+        trackingUrl: "stats.wuz.fyi",
         siteId: "BFIEQ",
       },
     },
