@@ -27,29 +27,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          `@raae/gatsby-remark-oembed`,
-        ],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -76,8 +53,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
@@ -90,7 +67,7 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: {frontmatter: { draft: { ne: true } }}
@@ -130,5 +107,27 @@ module.exports = {
     `gatsby-plugin-draft`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          posts: require.resolve("./src/templates/blog-post.js"),
+          default: require.resolve("./src/components/layout.js"),
+        },
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: {
+                tsx: "tsx",
+              },
+              aliases: {},
+            },
+          },
+        ],
+      },
+    },
   ],
 };

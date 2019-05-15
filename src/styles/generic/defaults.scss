@@ -10,9 +10,10 @@ html {
 
 body {
   font-family: $main-font;
-  background-color: $color-sky-lighter;
+  background-color: $color-sky-light;
   color: $color-inky-light;
   font-size: 20px;
+  line-height: 1.5;
 
   &.dark-mode {
     color: $color-sky-lighter;
@@ -59,4 +60,8 @@ a.no-border {
   &:hover {
     border: 0;
   }
+}
+
+label {
+  font-size: 0.75em;
 }

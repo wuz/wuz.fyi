@@ -1,47 +1,57 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Title from "../components/Title";
-import BlogPost from "../components/BlogPost";
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Title from '../components/Title';
+import BlogPost from '../components/BlogPost';
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+const BlogPostTemplate = props => {
+  const { data, pageContext, location } = props;
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
+
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+        keywords={post.frontmatter.tags.split(',')}
+      />
+      <header className="BlogHeader">
+        {post.frontmatter.cover_image && (
+          <div className="CoverImage">
+            <img src={post.frontmatter.cover_image} />
+          </div>
+        )}
         <Title>{post.frontmatter.title}</Title>
-        <p>{post.frontmatter.date}</p>
-        <BlogPost dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
+        <small className="PostMeta">{post.frontmatter.date}</small>
+      </header>
+      <MDXRenderer>{post.code.body}</MDXRenderer>
+      <BlogPost dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
 
-        <ul className="BlogPagination">
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    );
-  }
-}
+      <ul className="BlogPagination">
+        <li>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </ul>
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 
@@ -53,14 +63,25 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
-      html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        cover_image
+        tags
+      }
+      fields {
+        slug
+      }
+      rawBody
+      internal {
+        content
+      }
+      code {
+        body
+        scope
       }
     }
   }

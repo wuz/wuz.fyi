@@ -1,0 +1,18 @@
+@import '../../styles/ats/tools';
+@import '../../styles/ats/settings';
+
+.Newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  padding: $spacing-lg;
+  background: $color-sky-dark;
+  box-shadow: 0 0 20px rgba($color-inky, 0.2);
+  color: $color-inky;
+  min-height: 200px;
+  text-align: left;
+  border-radius: 4px;
+  transform: translateY(-50px);
+}

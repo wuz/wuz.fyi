@@ -1,9 +1,7 @@
-import React from "react";
-import useDarkMode from "use-dark-mode";
+import React from 'react';
+import useDarkMode from 'use-dark-mode';
 
-import "./ColorSwitch.scss";
-
-// Usage
+import './ColorSwitch.scss';
 
 const ColorSwitch = () => {
   const darkMode = useDarkMode(false);
@@ -11,7 +9,7 @@ const ColorSwitch = () => {
   return (
     <div className="ColorSwitch-container">
       <button
-        class="ColorSwitch"
+        className="ColorSwitch"
         onClick={darkMode.toggle}
         aria-label="Toggle Dark Mode"
       >

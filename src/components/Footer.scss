@@ -1,14 +1,32 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   padding: $spacing-md;
   width: 100%;
-  max-width: $main-width;
   margin: 0 auto;
-  border-top: 1px solid $color-inky-lighter;
+  color: $color-sky;
+  background: $color-inky;
+  margin-top: $spacing-xl;
+
+  .Footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: $main-width;
+    margin: 0 auto;
+  }
+
+  .Footer-right {
+    width: 75%;
+  }
+
+  .Footer-signature {
+    height: 100px;
+  }
+
+  .Footer-copyright {
+    font-size: 0.75em;
+  }
 }

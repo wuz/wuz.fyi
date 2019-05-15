@@ -1,5 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -8,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { draft: { ne: true } } }
           limit: 1000
@@ -18,8 +19,15 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
-              frontmatter {
-                title
+              id
+              parent {
+                ... on File {
+                  name
+                  sourceInstanceName
+                }
+              }
+              code {
+                scope
               }
             }
           }
@@ -31,33 +39,23 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges;
-
-    posts.forEach((post, index) => {
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
-
+    result.data.allMdx.edges.forEach(({ node }) => {
       createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
+        path: node.fields.slug,
+        component: componentWithMDXScope(blogPost, node.code.scope),
         context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
+          id: node.id,
+          slug: node.fields.slug,
         },
       });
     });
-
-    return null;
   });
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
@@ -65,4 +63,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+      alias: {
+        "~components": path.resolve(__dirname, "src/components"),
+      },
+    },
+  });
 };

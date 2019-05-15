@@ -1,10 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import "./Heading.scss";
+import './Heading.scss';
 
-const Heading = ({ element = "h2", children }) => {
+const Heading = ({ element = 'h2', size = 'normal', children }) => {
   const HeadingElement = element;
-  return <HeadingElement className={`Heading`}>{children}</HeadingElement>;
+  return (
+    <HeadingElement className={`Heading Heading--${size}`}>
+      {children}
+    </HeadingElement>
+  );
 };
 
 export default Heading;

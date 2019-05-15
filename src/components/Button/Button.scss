@@ -1,0 +1,13 @@
+@import '../../styles/ats/tools';
+@import '../../styles/ats/settings';
+
+.Button {
+  height: 40px;
+  padding: $spacing-sm $spacing-md;
+  border: 0;
+  border-radius: 2px;
+  font-size: 0.8em;
+  background: $color-brand;
+  color: $color-sky-lighter;
+  width: 100%;
+}

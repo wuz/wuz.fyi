@@ -1,7 +1,16 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Heading {
-  font-size: typescale(8);
   font-weight: 500;
+  margin: 0;
+  margin-bottom: $spacing-md;
+
+  &.Heading--normal {
+    font-size: typescale(9);
+  }
+
+  &.Heading--small {
+    font-size: typescale(6);
+  }
 }

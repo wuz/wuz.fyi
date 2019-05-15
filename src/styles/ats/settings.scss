@@ -1,4 +1,4 @@
-$main-font: "Public Sans";
+$main-font: 'Public Sans';
 
 /* COLORS */
 $color-brand-dark: darken(#5c95ff, 0.5);
@@ -14,6 +14,7 @@ $color-sky-lighter: #ffffff;
 $color-sky-light: #f8f9fb;
 $color-sky: #eff0f6;
 $color-sky-dark: #e2e4ee;
+$color-sky-darkest: darken(#e2e4ee, 0.5);
 
 /* SPACING */
 $unit: 2;

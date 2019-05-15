@@ -1,14 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import Social from "./Social";
+import Newsletter from './Newsletter';
+import Social from './Social';
 
-import "./Footer.scss";
+import signature from '../../content/assets/signature.png';
+
+import './Footer.scss';
 
 const Footer = () => (
   <footer className="Footer">
     <div className="Footer-content">
-      <div>© Wuz {new Date().getFullYear()}</div>
-      <Social />
+      <div className="Footer-right">
+        <Social />
+        <a href="/copy-what-you-want" className="Footer-copyright">
+          ¯\_(ツ)_/¯ {new Date().getFullYear()} &mdash; Copy what you want
+        </a>
+      </div>
+      <Newsletter />
     </div>
   </footer>
 );

@@ -1,0 +1,11 @@
+@import '../../styles/ats/tools';
+@import '../../styles/ats/settings';
+
+.TextInput {
+  height: 40px;
+  padding: $spacing-sm;
+  font-size: 0.8em;
+  border-radius: 4px;
+  border: 1px solid $color-sky-darkest;
+  margin: $spacing-sm 0;
+}

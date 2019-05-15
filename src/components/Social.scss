@@ -1,5 +1,5 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Social {
   display: flex;
@@ -8,4 +8,8 @@
   width: 125px;
   margin-top: $spacing-lg;
   // margin: 0 auto;
+
+  a {
+    color: $color-sky;
+  }
 }

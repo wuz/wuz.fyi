@@ -1,15 +1,15 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/layout";
-import Title from "../components/Title";
-import SEO from "../components/seo";
+import Layout from '../components/layout';
+import Title from '../components/Title';
+import SEO from '../components/seo';
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
     const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.allMdx.edges;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,17 +18,24 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
+            <Link to={node.fields.slug} key={node.fields.slug} className="Post">
+              {node.frontmatter.cover_image && (
+                <img
+                  src={node.frontmatter.cover_image}
+                  alt="Post cover image"
+                  className="Post-cover"
+                />
+              )}
+              <div className="Post-content">
+                <h3>{title}</h3>
+                <small>{node.frontmatter.date}</small>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </div>
+            </Link>
           );
         })}
       </Layout>
@@ -45,7 +52,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { draft: { ne: true } } }
     ) {
@@ -59,6 +66,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            cover_image
           }
         }
       }

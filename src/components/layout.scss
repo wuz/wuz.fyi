@@ -1,12 +1,12 @@
-@import "../styles/main";
+@import '../styles/main';
 
 .Container {
-  padding: 0 $spacing-md;
+  // padding: 0 $spacing-md;
 
   &:before {
     height: 5px;
     background: $color-brand;
-    content: "";
+    content: '';
     display: block;
     width: 100%;
     position: absolute;
@@ -19,6 +19,23 @@
   }
 }
 
+.CoverImage {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  img {
+    width: 100%;
+    transform: translateY(-100px);
+  }
+}
+
+.PostMeta {
+  font-style: italic;
+  font-weight: 500;
+  font-size: typescale(6);
+  color: $color-inky-lighter;
+}
+
 .BlogPagination {
   display: flex;
   list-style: none;
@@ -26,5 +43,29 @@
   margin: 0;
   li {
     width: 50%;
+  }
+}
+
+.Post {
+  display: block;
+  color: $color-inky;
+  border-bottom: 3px solid $color-inky-light;
+  background: $color-sky-lighter;
+  margin-bottom: $spacing-lg;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba($color-inky, 0.16);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 3px solid $color-brand;
+  }
+
+  .Post-cover {
+    width: 100%;
+  }
+
+  .Post-content {
+    padding: $spacing-sm $spacing-lg;
   }
 }

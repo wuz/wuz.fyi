@@ -8,7 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@raae/gatsby-remark-oembed": "0.0.6",
     "feather-icons": "^4.21.0",
     "gatsby": "^2.3.16",
     "gatsby-image": "^2.0.37",
@@ -24,11 +23,7 @@
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-plugin-typography": "^2.2.12",
-    "gatsby-remark-copy-linked-files": "^2.0.11",
-    "gatsby-remark-images": "^2.0.6",
     "gatsby-remark-prismjs": "^3.2.8",
-    "gatsby-remark-responsive-iframe": "^2.1.1",
-    "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
@@ -45,6 +40,11 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "@mdx-js/mdx": "^1.0.16",
+    "@mdx-js/react": "^1.0.16",
+    "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-mdx-prismjs": "^1.0.4",
+    "gatsby-transformer-mdx": "^1.1.1",
     "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
