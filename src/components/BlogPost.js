@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import "./BlogPost.scss";
+import './BlogPost.scss';
 
-const BlogPost = ({ dangerouslySetInnerHTML }) => (
-  <div className="BlogPost" dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+const BlogPost = ({ children, innerRef }) => (
+  <div ref={innerRef} className="BlogPost">
+    {children}
+  </div>
 );
 
 export default BlogPost;

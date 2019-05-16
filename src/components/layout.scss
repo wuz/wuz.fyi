@@ -56,6 +56,17 @@
   box-shadow: 0 0 10px rgba($color-inky, 0.16);
   text-decoration: none;
 
+  .dark-mode & {
+    background: $color-inky;
+    color: $color-sky-lighter;
+    border-bottom: 3px solid $color-sky-dark;
+
+    &:hover,
+    &:focus {
+      border-bottom: 3px solid $color-brand;
+    }
+  }
+
   &:hover,
   &:focus {
     border-bottom: 3px solid $color-brand;
