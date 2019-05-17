@@ -80,3 +80,13 @@
     padding: $spacing-sm $spacing-lg;
   }
 }
+
+.fill-icon svg {
+  stroke: none;
+  fill: currentColor;
+}
+
+.stroke-icon svg {
+  stroke: currentColor;
+  fill: none;
+}

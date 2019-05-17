@@ -1,13 +1,13 @@
 import React from 'react';
 import feather from 'feather-icons';
 
-const Icon = ({ name = 'circle', alt }) => {
+const Icon = ({ name = 'circle', alt, ...props }) => {
   return (
     <i
+      {...props}
       dangerouslySetInnerHTML={{
         __html: feather.icons[name].toSvg({
           title: alt,
-          fill: 'currentColor',
           strokeWidth: 0,
         }),
       }}

@@ -1,7 +1,7 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Icon from "./Icon";
-import "./Social.scss";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Icon from './Icon';
+import './Social.scss';
 
 const Social = () => {
   return (
@@ -16,21 +16,28 @@ const Social = () => {
               className="no-border"
               href={`https://twitter.com/${social.twitter}`}
             >
-              <Icon alt="" name="twitter" />
+              <Icon className="fill-icon" alt="" name="twitter" />
             </a>
             <a
               aria-label="View my work on Github"
               className="no-border"
               href={`https://github.com/${social.github}`}
             >
-              <Icon alt="" name="github" />
+              <Icon className="fill-icon" alt="" name="github" />
             </a>
             <a
               aria-label="Add me on LinkedIn"
               className="no-border"
               href={`https://linkedin.com/in/${social.linkedin}`}
             >
-              <Icon alt="" name="linkedin" />
+              <Icon className="fill-icon" alt="" name="linkedin" />
+            </a>
+            <a
+              aria-label="Follow my RSS feed"
+              className="no-border"
+              href="/feed.xml"
+            >
+              <Icon alt="" className="stroke-icon" name="rss" />
             </a>
           </div>
         );
