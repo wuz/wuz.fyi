@@ -1,8 +1,12 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Main {
   max-width: $main-width;
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    padding: 0 $spacing-md;
+  }
 }

@@ -8,4 +8,8 @@
   border-radius: 4px;
   border: 1px solid $color-sky-darkest;
   margin: $spacing-sm 0;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
 }

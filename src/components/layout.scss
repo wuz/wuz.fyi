@@ -1,8 +1,6 @@
 @import '../styles/main';
 
 .Container {
-  // padding: 0 $spacing-md;
-
   &:before {
     height: 5px;
     background: $color-brand;

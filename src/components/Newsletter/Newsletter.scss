@@ -15,4 +15,10 @@
   text-align: left;
   border-radius: 4px;
   transform: translateY(-50px);
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+    margin: 0;
+    order: -1;
+  }
 }

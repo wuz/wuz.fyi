@@ -7,9 +7,12 @@
   justify-content: space-between;
   width: 125px;
   margin-top: $spacing-lg;
-  // margin: 0 auto;
 
   a {
     color: $color-sky;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    margin: 0 auto;
   }
 }
