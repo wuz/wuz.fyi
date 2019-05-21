@@ -21,6 +21,7 @@
   width: 100%;
   overflow: hidden;
   height: 300px;
+  margin-top: $spacing-md;
   img {
     width: 100%;
     transform: translateY(-100px);
@@ -28,9 +29,12 @@
 }
 
 .PostMeta {
+  display: block;
+  margin: 0;
+  margin-top: $spacing-md;
   font-style: italic;
   font-weight: 500;
-  font-size: typescale(6);
+  font-size: typescale(3);
   color: $color-inky-lighter;
 }
 

@@ -20,7 +20,7 @@ const BlogPostTemplate = props => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        keywords={post.frontmatter.tags.split(',')}
+        keywords={post.frontmatter.keywords.split(',')}
       />
       <header className="BlogHeader">
         {post.frontmatter.cover_image && (
@@ -28,10 +28,10 @@ const BlogPostTemplate = props => {
             <img src={post.frontmatter.cover_image} />
           </div>
         )}
-        <Title>{post.frontmatter.title}</Title>
         <small className="PostMeta">
           {post.frontmatter.date} | <WordCount countElement={postRef} />
         </small>
+        <Title>{post.frontmatter.title}</Title>
       </header>
       <BlogPost innerRef={postRef}>
         <MDXRenderer>{post.code.body}</MDXRenderer>

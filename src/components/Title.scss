@@ -1,8 +1,9 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Title {
-  font-size: typescale(13);
+  margin: 0;
+  font-size: typescale(14);
   margin-bottom: $spacing-md;
-  line-height: 1.3;
+  line-height: 1.1;
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "./Text.scss";
+import './Text.scss';
 
-const Text = ({ element = "h2", children }) => {
+const Text = ({ children }) => {
   return <p className={`Text`}>{children}</p>;
 };
 
