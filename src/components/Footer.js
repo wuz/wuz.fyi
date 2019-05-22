@@ -5,7 +5,7 @@ import Social from './Social';
 
 import './Footer.scss';
 
-const Footer = () => (
+const Footer = ({ hideNewsletter }) => (
   <footer className="Footer">
     <div className="Footer-content">
       <div className="Footer-right">
@@ -35,7 +35,7 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <Newsletter />
+      {!hideNewsletter && <Newsletter />}
     </div>
   </footer>
 );
