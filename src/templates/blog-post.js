@@ -15,12 +15,14 @@ const BlogPostTemplate = props => {
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
+  const keywords = post.frontmatter.keywords || '';
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        keywords={post.frontmatter.keywords.split(',')}
+        keywords={keywords.split(',')}
       />
       <header className="BlogHeader">
         {post.frontmatter.cover_image && (
