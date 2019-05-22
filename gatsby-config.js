@@ -30,10 +30,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-fathom",
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingUrl: "stats.wuz.fyi",
-        siteId: "BFIEQ",
+        trackingUrl: 'stats.wuz.fyi',
+        siteId: 'BFIEQ',
       },
     },
     {
@@ -61,7 +61,7 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   draft: edge.node.draft,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
             },
@@ -86,8 +86,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/feed.xml",
-            title: "wuz.fyi RSS Feed",
+            output: '/feed.xml',
+            title: 'wuz.fyi RSS Feed',
           },
         ],
       },
@@ -111,19 +111,31 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         defaultLayouts: {
-          posts: require.resolve("./src/templates/blog-post.js"),
-          default: require.resolve("./src/components/layout.js"),
+          posts: require.resolve('./src/templates/blog-post.js'),
+          default: require.resolve('./src/components/layout.js'),
         },
-        extensions: [".mdx", ".md"],
+        extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: {
-                tsx: "tsx",
+                tsx: 'tsx',
               },
               aliases: {},
+            },
+          },
+          {
+            resolve: '@raae/gatsby-remark-oembed',
+            options: {
+              providers: {
+                settings: {
+                  Twitter: {
+                    theme: 'dark', // Use the Twitter dark theme
+                  },
+                },
+              },
             },
           },
         ],

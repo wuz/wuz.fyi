@@ -1,17 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Button from '~components/Button';
 import TextInput from '~components/TextInput';
 import Heading from '~components/Heading';
 import Text from '~components/Text';
-
-import Layout from '../components/layout';
-import Spacer from '../components/Spacer';
-import Divider from '../components/Divider';
-import List, { ListItem } from '../components/List';
-import SEO from '../components/seo';
-import SubHeading from '../components/SubHeading';
+import Layout from '~components/layout';
+import Spacer from '~components/Spacer';
+import SEO from '~components/seo';
 
 const Newsletter = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;

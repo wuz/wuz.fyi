@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
               {node.frontmatter.cover_image && (
                 <img
                   src={node.frontmatter.cover_image}
-                  alt="Post cover image"
+                  alt=""
                   className="Post-cover"
                 />
               )}
@@ -31,7 +31,7 @@ class BlogIndex extends React.Component {
                 <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
+                    __html: node.excerpt || node.frontmatter.description,
                   }}
                 />
               </div>

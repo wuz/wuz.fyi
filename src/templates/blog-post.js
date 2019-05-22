@@ -27,7 +27,7 @@ const BlogPostTemplate = props => {
       <header className="BlogHeader">
         {post.frontmatter.cover_image && (
           <div className="CoverImage">
-            <img src={post.frontmatter.cover_image} />
+            <img alt="" src={post.frontmatter.cover_image} />
           </div>
         )}
         <small className="PostMeta">
