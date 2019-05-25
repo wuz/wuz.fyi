@@ -20,11 +20,11 @@
 .CoverImage {
   width: 100%;
   overflow: hidden;
-  height: 300px;
+  max-height: 400px;
   margin-top: $spacing-md;
   img {
     width: 100%;
-    transform: translateY(-100px);
+    // transform: translateY(-100px);
   }
 }
 
@@ -91,4 +91,12 @@
 .stroke-icon svg {
   stroke: currentColor;
   fill: none;
+}
+
+.gatsby-resp-image-link {
+  border: 0;
+  text-align: center;
+  &:hover {
+    border: none;
+  }
 }

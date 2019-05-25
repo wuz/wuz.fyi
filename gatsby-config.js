@@ -117,16 +117,6 @@ module.exports = {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: {
-                tsx: 'tsx',
-              },
-              aliases: {},
-            },
-          },
-          {
             resolve: '@raae/gatsby-remark-oembed',
             options: {
               providers: {
@@ -136,6 +126,31 @@ module.exports = {
                   },
                 },
               },
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+          },
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: `gatsby-remark-lazy-load`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: {
+                tsx: 'tsx',
+              },
+              aliases: {},
             },
           },
         ],

@@ -1,5 +1,5 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .BlogPost {
   h1 {
@@ -25,14 +25,6 @@
     line-height: 1.25;
     margin-bottom: $spacing-md;
     max-width: 50em;
-  }
-
-  img {
-    display: inline-block;
-    max-width: 50vw;
-    width: auto;
-    box-shadow: $shadow-main;
-    padding: $spacing-md;
   }
 
   blockquote {

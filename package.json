@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "wuz.fyi",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "The personal site of Conlin Durbin",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Conlin Durbin <sup@wuz.fyi>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/wuz/wuz.fyi/issues"
   },
   "dependencies": {
     "@raae/gatsby-remark-oembed": "0.0.7",
@@ -25,7 +25,11 @@
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.37",
     "gatsby-plugin-typescript": "^2.0.12",
+    "gatsby-remark-copy-linked-files": "^2.0.12",
+    "gatsby-remark-images": "^3.0.12",
+    "gatsby-remark-lazy-load": "^1.0.1",
     "gatsby-remark-prismjs": "^3.2.8",
+    "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.19",
@@ -45,7 +49,7 @@
     "gatsby-transformer-mdx": "^1.1.1",
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "wuz.fyi",
   "keywords": [
     "gatsby"
   ],
@@ -53,7 +57,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/wuz/wuz.fyi.git"
   },
   "scripts": {
     "build": "gatsby build",
