@@ -1,14 +1,12 @@
 import React from 'react';
-
+import './Footer.scss';
 import Newsletter from './Newsletter';
 import Social from './Social';
-
-import './Footer.scss';
 
 const Footer = ({ hideNewsletter }) => (
   <footer className="Footer">
     <div className="Footer-content">
-      <div className="Footer-right">
+      <div className="Footer-left">
         <Social />
         <div className="Footer-copyright">
           <a href="/copy-what-you-want" className="Footer-licenseLink">
@@ -35,7 +33,7 @@ const Footer = ({ hideNewsletter }) => (
           </div>
         </div>
       </div>
-      {!hideNewsletter && <Newsletter />}
+      <div className="Footer-right">{!hideNewsletter && <Newsletter />}</div>
     </div>
   </footer>
 );

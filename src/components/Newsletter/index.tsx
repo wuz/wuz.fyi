@@ -1,13 +1,19 @@
 import React from 'react';
-
-import './Newsletter.scss';
-
 import Button from '~components/Button';
-import TextInput from '~components/TextInput';
 import Heading from '~components/Heading';
 import Text from '~components/Text';
+import TextInput from '~components/TextInput';
+import './Newsletter.scss';
 
-const Newsletter = () => (
+interface NewsletterProps {
+  message: string;
+  title: string;
+}
+
+const Newsletter: React.FunctionComponent<NewsletterProps> = ({
+  message = "I share a weekly update about the things I've learned",
+  title = 'Join my email list!',
+}) => (
   <div id="mc_embed_signup">
     <form
       action="https://fyi.us20.list-manage.com/subscribe/post?u=4e149d25f22ee51f2325300f0&amp;id=3638f2ca92"
@@ -16,12 +22,12 @@ const Newsletter = () => (
       name="mc-embedded-subscribe-form"
       className="Newsletter validate"
       target="_blank"
-      novalidate
+      noValidate
     >
-      <Heading size="small">Join my email list!</Heading>
-      <Text>I share a weekly update about the things I've learned</Text>
+      <Heading size="small">{title}</Heading>
+      <Text>{message}</Text>
       <label htmlFor="mce-EMAIL">
-        Email<span class="asterisk">*</span>
+        Email<span className="asterisk">*</span>
       </label>
       <TextInput
         placeholder="you@your.domain"
@@ -31,7 +37,7 @@ const Newsletter = () => (
         className="required"
       />
       <br />
-      <label for="mce-FNAME">First Name </label>
+      <label htmlFor="mce-FNAME">First Name </label>
       <TextInput
         placeholder="Namey"
         type="text"
@@ -44,18 +50,18 @@ const Newsletter = () => (
         <input
           type="text"
           name="b_4e149d25f22ee51f2325300f0_3638f2ca92"
-          tabindex="-1"
+          tabIndex={-1}
           value=""
         />
       </div>
-      <div id="mce-responses" class="clear">
+      <div id="mce-responses" className="clear">
         <div
-          class="response"
+          className="response"
           id="mce-error-response"
           style={{ display: 'none' }}
         />
         <div
-          class="response"
+          className="response"
           id="mce-success-response"
           style={{ display: 'none' }}
         />

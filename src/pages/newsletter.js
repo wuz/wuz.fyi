@@ -39,7 +39,7 @@ const Newsletter = ({ data, location }) => {
           <Heading size="small">Join my email list!</Heading>
           <Text>I share a weekly update about the things I've learned</Text>
           <label htmlFor="mce-EMAIL">
-            Email<span class="asterisk">*</span>
+            Email<span className="asterisk">*</span>
           </label>
           <br />
           <TextInput
@@ -71,14 +71,14 @@ const Newsletter = ({ data, location }) => {
               value=""
             />
           </div>
-          <div id="mce-responses" class="clear">
+          <div id="mce-responses" className="clear">
             <div
-              class="response"
+              className="response"
               id="mce-error-response"
               style={{ display: 'none' }}
             />
             <div
-              class="response"
+              className="response"
               id="mce-success-response"
               style={{ display: 'none' }}
             />

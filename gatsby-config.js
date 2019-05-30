@@ -11,8 +11,27 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-typescript`,
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        allExtensions: true, // defaults to false
+      },
+    },
+    `gatsby-plugin-typescript-checker`,
+    `gatsby-plugin-tslint`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '~components': 'src/components',
+          '~styles': 'src/styles',
+        },
+        extensions: [],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -111,23 +130,11 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         defaultLayouts: {
-          posts: require.resolve('./src/templates/blog-post.js'),
+          posts: require.resolve('./src/templates/blog-post.tsx'),
           default: require.resolve('./src/components/layout.js'),
         },
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
-          {
-            resolve: '@raae/gatsby-remark-oembed',
-            options: {
-              providers: {
-                settings: {
-                  Twitter: {
-                    theme: 'dark', // Use the Twitter dark theme
-                  },
-                },
-              },
-            },
-          },
           {
             resolve: `gatsby-remark-copy-linked-files`,
           },

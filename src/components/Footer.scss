@@ -23,11 +23,17 @@
     }
   }
 
-  .Footer-right {
-    width: 75%;
+  .Footer-left {
+    width: 80%;
     @media screen and (max-width: $breakpoint-sm) {
       width: 100%;
     }
+  }
+
+  .Footer-right {
+    transform: translateY(-50px);
+    min-height: 200px;
+    box-shadow: 0 0 20px rgba($color-inky, 0.2);
   }
 
   .Footer-signature {

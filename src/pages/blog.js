@@ -16,7 +16,6 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" keywords={[`blog`, `javascript`, `react`]} />
         <Title>recent posts</Title>
         {posts.map(({ node }) => {
-          console.log(node.frontmatter.cover_image);
           const title = node.frontmatter.title || node.fields.slug;
           return (
             <Link to={node.fields.slug} key={node.fields.slug} className="Post">

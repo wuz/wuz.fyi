@@ -9,7 +9,7 @@ const WordCount = ({ countElement }) => {
       Countable.count(countElement.current, setCount);
     }
   }, [countElement.current]);
-  if (!count) return <div />;
+  if (!count) { return <div />; }
   const convertedCount = Object.entries(count).reduce(
     (acc, [key, value]) => ({
       ...acc,
