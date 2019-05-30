@@ -20,7 +20,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript-checker`,
-    `gatsby-plugin-tslint`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-alias-imports`,
