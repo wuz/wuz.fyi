@@ -26,9 +26,17 @@ module.exports = {
       options: {
         alias: {
           '~components': 'src/components',
+          '~utils': 'src/utils',
           '~styles': 'src/styles',
         },
         extensions: [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog-images`,
+        name: `blog-images`,
       },
     },
     {
@@ -130,7 +138,7 @@ module.exports = {
       options: {
         defaultLayouts: {
           posts: require.resolve('./src/templates/blog-post.tsx'),
-          default: require.resolve('./src/components/layout.js'),
+          default: require.resolve('./src/components/Page.tsx'),
         },
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [

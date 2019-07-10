@@ -1,9 +1,8 @@
+import { graphql, Link } from 'gatsby';
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-
 import Layout from '../components/layout';
-import Title from '../components/Title';
 import SEO from '../components/seo';
+import Title from '../components/Title';
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,30 +13,36 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" keywords={[`blog`, `javascript`, `react`]} />
-        <Title>recent posts</Title>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <Link to={node.fields.slug} key={node.fields.slug} className="Post">
-              {node.frontmatter.cover_image && (
-                <img
-                  src={node.frontmatter.cover_image}
-                  alt=""
-                  className="Post-cover"
-                />
-              )}
-              <div className="Post-content">
-                <h3>{title}</h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.excerpt || node.frontmatter.description,
-                  }}
-                />
-              </div>
-            </Link>
-          );
-        })}
+        <main className="BlogRoll">
+          <Title>recent posts</Title>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug;
+            return (
+              <Link
+                to={node.fields.slug}
+                key={node.fields.slug}
+                className="Post"
+              >
+                {node.frontmatter.cover_image && (
+                  <img
+                    src={node.frontmatter.cover_image}
+                    alt=""
+                    className="Post-cover"
+                  />
+                )}
+                <div className="Post-content">
+                  <h3>{title}</h3>
+                  <small>{node.frontmatter.date}</small>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.excerpt || node.frontmatter.description,
+                    }}
+                  />
+                </div>
+              </Link>
+            );
+          })}
+        </main>
       </Layout>
     );
   }

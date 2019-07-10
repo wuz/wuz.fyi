@@ -1,20 +1,6 @@
+@import './colors';
+
 $main-font: 'Public Sans';
-
-/* COLORS */
-$color-brand-dark: darken(#5c95ff, 0.5);
-$color-brand: #5c95ff;
-$color-brand-dim: rgba(#5c95ff, 0.5);
-
-$color-inky-lighter: #7d8b98;
-$color-inky-light: #2a2d46;
-$color-inky: #1d1f30;
-$color-inky-dark: #191b2a;
-
-$color-sky-lighter: #ffffff;
-$color-sky-light: #f8f9fb;
-$color-sky: #eff0f6;
-$color-sky-dark: #e2e4ee;
-$color-sky-darkest: darken(#e2e4ee, 0.5);
 
 /* SPACING */
 $unit: 2;

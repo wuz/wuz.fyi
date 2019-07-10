@@ -1,0 +1,27 @@
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
+
+.Callout {
+  padding: $spacing-md;
+  border-radius: 4px;
+  color: currentColor;
+  border-bottom: 0;
+
+  * {
+    color: currentColor !important;
+  }
+
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.Callout--lilac {
+  background-color: color('lilac');
+  color: darken(color('trendy'), 20) !important;
+}
+
+.Callout--cornflower {
+  background-color: color('cornflower');
+  color: color('jackson') !important;
+}

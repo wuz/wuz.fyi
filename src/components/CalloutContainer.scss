@@ -1,0 +1,20 @@
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
+
+.CalloutContainer {
+  max-width: $main-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: $spacing-md;
+  display: flex;
+  perspective: 1000px;
+
+  .Callout {
+    margin-right: $spacing-md;
+    width: 50%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

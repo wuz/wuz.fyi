@@ -1,0 +1,42 @@
+$colors: (
+  'lilac': (
+    'base': #dfbcff,
+  ),
+  'glacier': (
+    'base': #7ab7c9,
+  ),
+  'cornflower': (
+    'base': #5c95ff,
+  ),
+  'trendy': (
+    'base': #876294,
+  ),
+  'jackson': (
+    'base': #1c3a9a,
+  ),
+  'sunflower': (
+    'base': #e7da87,
+  ),
+);
+
+$color-inky-lighter: #7d8b98;
+$color-inky-light: #2a2d46;
+$color-inky: #1d1f30;
+$color-inky-dark: #191b2a;
+$color-inky-darker: #07080c;
+
+$color-sky-lighter: #ffffff;
+$color-sky-light: #f8f9fb;
+$color-sky: #eff0f6;
+$color-sky-dark: #e2e4ee;
+$color-sky-darker: #c1c3cc;
+
+$color-brand-darker: darken(#5c95ff, 50);
+$color-brand-dark: darken(#5c95ff, 30);
+$color-brand: #5c95ff;
+$color-brand-dim: rgba(#5c95ff, 0.5);
+
+$color-brand-purple-darker: darken(#dfbcff, 20);
+$color-brand-purple-dark: darken(#dfbcff, 10);
+$color-brand-purple: #dfbcff;
+$color-brand-purple-dim: rgba(#dfbcff, 0.5);

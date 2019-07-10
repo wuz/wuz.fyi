@@ -1,11 +1,10 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .SubHeading {
   font-size: typescale(4);
   font-weight: 700;
   text-transform: uppercase;
-  color: $color-inky-lighter;
   margin-top: 0;
 
   .dark-mode & {

@@ -1,18 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
-import ColorSwitch from './ColorSwitch';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
-
-import './layout.scss';
-
 import favicon from '../../content/assets/favicon.png';
+import ColorSwitch from './ColorSwitch';
+import Footer from './Footer';
+import Header from './Header';
+import './layout.scss';
 
 class Layout extends React.Component {
   render() {
-    const { title, children, hideNewsletter = false } = this.props;
+    const {
+      title,
+      children,
+      hideNewsletter = false,
+      showHeaderCallout = true,
+    } = this.props;
     return (
       <div className="Container">
         <Helmet
@@ -23,8 +24,8 @@ class Layout extends React.Component {
           <script src="https://unpkg.com/feather-icons" />
           <script src="/dark-mode.js" />
         </Helmet>
-        <Header title={title} />
-        <Main>{children}</Main>
+        <Header showHeaderCallout={showHeaderCallout} title={title} />
+        {children}
         <ColorSwitch />
         <Footer hideNewsletter={hideNewsletter} />
       </div>

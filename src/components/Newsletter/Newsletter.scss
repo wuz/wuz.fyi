@@ -7,8 +7,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding: $spacing-lg;
-  background: $color-sky-dark;
-  color: $color-inky;
+  background: color('lilac');
+  color: color('trendy', $for-background: color('lilac'));
   text-align: left;
   border-radius: 4px;
 
@@ -16,5 +16,9 @@
     width: 100%;
     margin: 0;
     order: -1;
+  }
+
+  .BlogPost & {
+    margin: 0 -1 * $spacing-lg;
   }
 }

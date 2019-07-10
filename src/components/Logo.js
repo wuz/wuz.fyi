@@ -3,19 +3,19 @@ import React from 'react';
 const Logo = ({ className, alt }) => (
   <svg viewBox="0 0 167 125" className={className}>
     <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stopColor="#f5c3ff">
+      <stop offset="0%" stopColor="#FF9AA2">
         <animate
           attributeName="stop-color"
-          values="#f5c3ff; #5c95ff; #f5c3ff"
+          values="#FF9AA2; #FFB7B2; #FFDAC1; #E2F0CB; #B5EAD7; #C7CEEA"
           dur="1s"
           repeatCount="indefinite"
         />
       </stop>
 
-      <stop offset="100%" stopColor="#5c95ff">
+      <stop offset="100%" stopColor="#C7CEEA">
         <animate
           attributeName="stop-color"
-          values="#5c95ff; #f5c3ff; #5c95ff"
+          values="#C7CEEA; #B5EAD7; #E2F0CB; #FFDAC1; #FFB7B2; #FF9AA2"
           dur="1s"
           repeatCount="indefinite"
         />

@@ -1,0 +1,87 @@
+---
+title: '"Self-Documented" code rarely is'
+draft: true
+cover_image: https://i.imgur.com/iz1ePMi.png
+date: 2019-06-05
+description: Comment your code early and often
+keywords: opinion, programming, self documenting code, programming principals
+---
+
+<!-- You've probably heard someone talk about "self-documenting" code. The idea is -->
+
+that by writing code with variables and functions that document themselves,
+engineers don't have to spend as much time explicitly documenting code.
+
+I want to discuss why that is rarely the case.
+
+People who write "self-documenting" code aren't monsters. They are just
+listening to the community, hearing this idea, and rolling with it. Let's look
+at a quick example of so-called "self-documenting" code, then deconstruct the
+ways in which it's not self-documenting. Once we've examined that, we'll talk
+about some other options.
+
+Imagine a simple function like this - called to render some React elements given
+some items.
+
+```jsx
+const createList = (...listElems) => {
+  return listElems.map(listItem => {
+    return (
+      <li className="ListItem">
+        {listItem.text}
+        <span className="ListItem--count">{listItem.count}</span>
+      </li>
+    );
+  });
+};
+```
+
+Let's step through this line-by-line and see how long it takes us to reason
+about this code.
+
+```jsx
+const createList = (...listElems) => {
+```
+
+We've started with this line. Right off the bat, we know this function takes
+`listElems`, which comes in as an array... Or do we? This code is presupposing a
+lot about the reader of this function. Do they know that the `...` syntax in JS
+means an array?
+
+Let's assume the understand the basics of JS as we continue on.
+
+```jsx
+  return listElems.map(listItem => {
+```
+
+We are now returning the mapped over `listElems`. Hopefully our reader knows how
+the `map` function works. We still don't know what a `listItem` looks like.
+Let's keep going.
+
+```jsx
+    return (
+      <li className="ListItem">
+        {listItem.text}
+        <span className="ListItem--count">
+          {listItem.count}
+        </span>
+      </li>
+```
+
+The last lines are all JSX and start to tell us the real content of this
+function. We can see that we are returning an li - this function should get
+called from inside an ul component. We can also see that we are accessing text
+and count on the listItem, which means we need to pass in an object with that
+structure.
+
+A lot of presupposition is happening here - we figure the reader will know what
+we know and that could lead to some problems. What if someone calls this
+function from outside of a ul? Or passes in the wrong arguments?
+
+What options do we have to prevent this?
+
+## Comment your code
+
+## Isolate your components/functions
+
+## Write technical documentation

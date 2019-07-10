@@ -1,35 +1,27 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .Header {
-  max-width: $main-width;
-  margin: 0 auto;
-  margin-top: -1 * $spacing-lg;
-  border-bottom: 1px solid $color-inky-lighter;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  padding-top: $spacing-lg;
-
-  @media screen and (max-width: $breakpoint-md) {
-    align-items: center;
-  }
-
-  @media screen and (max-width: $breakpoint-sm) {
-    flex-direction: column;
-    align-items: center;
-  }
+  // background: linear-gradient(color('cornflower'), color('lilac'));
+  background-color: $color-inky;
+  color: $color-sky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-lg;
+  margin-bottom: -1 * $spacing-md;
 
   .Header-content {
-    font-size: typescale(6);
-    padding-top: $spacing-lg;
-    padding-right: $spacing-lg;
-    padding-bottom: $spacing-lg;
-
-    @media screen and (max-width: $breakpoint-md) {
-      padding-right: 0;
-    }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $main-width;
+    font-size: typescale(5);
+    padding-bottom: $spacing-md;
 
     @media screen and (max-width: $breakpoint-sm) {
       text-align: center;
@@ -40,6 +32,20 @@
     }
   }
 
+  .Header-nav {
+    a {
+      color: $color-sky;
+      border-bottom: 0;
+      padding: $spacing-sm $spacing-md;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: $color-inky-light;
+      }
+    }
+  }
+
   .Header-logoLink {
     border: 0;
     padding-top: $spacing-lg;
@@ -47,7 +53,6 @@
     align-items: center;
     justify-content: center;
     width: 25%;
-    flex: 1 0 25%;
 
     @media screen and (max-width: $breakpoint-md) {
       border: none;
@@ -58,10 +63,38 @@
     }
   }
 
+  .Header-callout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $main-width;
+    color: $color-inky;
+    padding: $spacing-md;
+    border-radius: 4px;
+    background-color: color('sunflower');
+    color: darken(color('sunflower'), 55);
+    position: relative;
+    overflow: hidden;
+    padding-right: 175px;
+
+    a {
+      color: darken(color('sunflower'), 55);
+      border-bottom-color: darken(color('sunflower'), 55);
+    }
+
+    img {
+      position: absolute;
+      height: 150px;
+      width: 150px;
+      right: -10px;
+    }
+  }
+
   .Header-logo {
     max-width: 200px;
     width: 100%;
-    fill: $color-inky;
+    fill: $color-sky-dark;
     padding: $spacing-lg;
 
     &:hover {

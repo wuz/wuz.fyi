@@ -1,14 +1,17 @@
 import { graphql, Link } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import BlogPost from '~components/BlogPost';
 import Layout from '~components/layout';
+import Main from '~components/Main';
 import SEO from '~components/seo';
 import Title from '~components/Title';
 import WordCount from '~components/WordCount';
+import { useTiltRef } from '~utils/tilt';
 
 const BlogPostTemplate = props => {
   const postRef = useRef();
+  const imageRef = useTiltRef();
   const { data, pageContext, location } = props;
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
@@ -17,7 +20,7 @@ const BlogPostTemplate = props => {
   const keywords = post.frontmatter.keywords || '';
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} showHeaderCallout={false}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -25,7 +28,7 @@ const BlogPostTemplate = props => {
       />
       <header className="BlogHeader">
         {post.frontmatter.cover_image && (
-          <div className="CoverImage">
+          <div className="CoverImage" ref={imageRef}>
             <img alt="" src={post.frontmatter.cover_image} />
           </div>
         )}
@@ -34,9 +37,11 @@ const BlogPostTemplate = props => {
         </small>
         <Title>{post.frontmatter.title}</Title>
       </header>
-      <BlogPost innerRef={postRef}>
-        <MDXRenderer>{post.code.body}</MDXRenderer>
-      </BlogPost>
+      <Main>
+        <BlogPost innerRef={postRef}>
+          <MDXRenderer>{post.code.body}</MDXRenderer>
+        </BlogPost>
+      </Main>
       <hr />
       <ul className="BlogPagination">
         <li>

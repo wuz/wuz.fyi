@@ -1,8 +1,6 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Text from "./Text";
-import Heading from "./Heading";
-import SubHeading from "./SubHeading";
+import { graphql, StaticQuery } from 'gatsby';
+import React from 'react';
+import Text from './Text';
 
 function Bio() {
   return (
@@ -12,8 +10,6 @@ function Bio() {
         const { author } = data.site.siteMetadata;
         return (
           <div>
-            <Heading>Howdy, I'm Wuz</Heading>
-            <SubHeading>A.K.A. {author}</SubHeading>
             <Text>I build accessible, performant frontends.</Text>
           </div>
         );
