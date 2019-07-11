@@ -1,5 +1,5 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .ColorSwitch-container {
   display: flex;
@@ -8,6 +8,7 @@
   position: fixed;
   right: $spacing-md;
   top: $spacing-md;
+  z-index: 100;
 }
 
 .ColorSwitch {
@@ -28,7 +29,7 @@
 }
 
 .ColorSwitch:before {
-  content: "🌎";
+  content: '🌎';
   display: block;
   /* height: 15px; */
   /* width: 15px; */

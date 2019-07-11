@@ -17,4 +17,20 @@
       margin-right: 0;
     }
   }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    padding: $spacing-sm;
+
+    .Callout {
+      width: 100%;
+      flex: 0 0 100%;
+      margin: 0;
+      margin-bottom: $spacing-md;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

@@ -31,9 +31,14 @@
   }
 
   .Footer-right {
-    transform: translateY(-50px);
+    transform: translateY(-1 * $spacing-lg);
     min-height: 200px;
     box-shadow: 0 0 20px rgba($color-inky, 0.2);
+
+    @media screen and (max-width: $breakpoint-sm) {
+      order: -1;
+      margin-bottom: -1 * $spacing-md;
+    }
   }
 
   .Footer-signature {
@@ -65,6 +70,10 @@
         margin: 6px 4px 0 4px;
         padding: 0;
         height: 100%;
+      }
+
+      @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: column;
       }
     }
 
