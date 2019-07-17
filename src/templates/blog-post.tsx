@@ -5,6 +5,7 @@ import BlogPost from '~components/BlogPost';
 import Layout from '~components/layout';
 import Main from '~components/Main';
 import SEO from '~components/seo';
+import SubHeading from '~components/SubHeading';
 import Title from '~components/Title';
 import WordCount from '~components/WordCount';
 import { useTiltRef } from '~utils/tilt';
@@ -32,10 +33,14 @@ const BlogPostTemplate = props => {
             <img alt="" src={post.frontmatter.cover_image} />
           </div>
         )}
+
+        {post.frontmatter.series && (
+          <SubHeading>{post.frontmatter.series}:</SubHeading>
+        )}
+        <Title>{post.frontmatter.title}</Title>
         <small className="PostMeta">
           {post.frontmatter.date} | <WordCount countElement={postRef} />
         </small>
-        <Title>{post.frontmatter.title}</Title>
       </header>
       <Main>
         <BlogPost innerRef={postRef}>
@@ -77,6 +82,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        series
         date(formatString: "MMMM DD, YYYY")
         description
         cover_image

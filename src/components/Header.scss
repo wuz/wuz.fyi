@@ -1,11 +1,17 @@
 @import '../styles/ats/tools';
 @import '../styles/ats/settings';
 
+@keyframes Gradient {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 300%;
+  }
+}
+
 .Header {
   width: 100%;
-  // background: linear-gradient(color('cornflower'), color('lilac'));
-  background-color: $color-inky;
-  color: $color-sky;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,14 +41,30 @@
 
   .Header-nav {
     a {
-      color: $color-sky;
+      color: $color-inky;
       border-bottom: 0;
       padding: $spacing-sm $spacing-md;
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       border-radius: 2px;
 
       &:hover {
-        background-color: $color-inky-light;
+        animation: Gradient 1s linear infinite;
+        background: linear-gradient(
+          45deg,
+          #ff9aa2,
+          #ffb7b2,
+          #ffdac1,
+          #e2f0cb,
+          #b5ead7,
+          #c7ceea,
+          #eab2f3,
+          #ff9aa2,
+          #ffb7b2,
+          #ffdac1,
+          #e2f0cb,
+          #b5ead7,
+          #c7ceea
+        );
+        background-size: 100% 300%;
       }
     }
   }
@@ -95,7 +117,6 @@
   .Header-logo {
     max-width: 200px;
     width: 100%;
-    fill: $color-sky-dark;
     padding: $spacing-lg;
 
     &:hover {
