@@ -17,7 +17,7 @@ body {
 
   &.dark-mode {
     color: $color-sky-lighter;
-    background-color: $color-inky-light;
+    background-color: $color-inky;
   }
 }
 
@@ -25,23 +25,36 @@ strong {
   font-weight: 700;
 }
 
-a {
-  color: $color-inky;
+a:not(.no-hover) {
+  display: inline-block;
+  position: relative;
   text-decoration: none;
-  color: $color-brand-dark;
-  border-bottom: 2px solid $color-brand-dim;
-  transition: border-color 0.2s ease-in-out;
+  color: color('trendy', 'text');
+  overflow: hidden;
+  vertical-align: bottom;
 
-  .dark-mode & {
-    color: $color-brand;
+  &:after {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.1em;
+    background-color: currentColor;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
 
-    &:hover {
-      border-bottom-color: $color-brand;
+  &:hover,
+  &:focus {
+    &:after {
+      transform: translateX(0);
     }
   }
 
-  &:hover {
-    border-bottom: 2px solid $color-brand-dark;
+  .dark-mode & {
+    color: color('trendy', 'dark-text');
   }
 }
 

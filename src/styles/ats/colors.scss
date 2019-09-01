@@ -1,6 +1,7 @@
 $colors: (
   'lilac': (
     'base': #dfbcff,
+    'text': darken(#dfbcff, 30),
   ),
   'glacier': (
     'base': #7ab7c9,
@@ -9,15 +10,25 @@ $colors: (
     'base': #5c95ff,
   ),
   'trendy': (
-    'base': #876294,
+    'base': #c7ceea,
+    'dim': rgba(desaturate(#c7ceea, 30), 0.75),
+    'text': darken(#c7ceea, 40),
+    'dark-text': darken(#c7ceea, 20),
   ),
   'jackson': (
     'base': #1c3a9a,
   ),
   'sunflower': (
-    'base': #e7da87,
+    'base': #ffdac1,
+    'text': desaturate(darken(#ffdac1, 40), 20),
   ),
 );
+
+$c1: #ff9aa2;
+$c2: #ffb7b2;
+$c3: #ffdac1;
+$c4: #e2f0cb;
+$c5: #b5ead7;
 
 $color-inky-lighter: #7d8b98;
 $color-inky-light: #2a2d46;

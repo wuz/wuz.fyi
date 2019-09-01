@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import newsletter from '../../content/assets/newsletter.png';
 import './Header.scss';
 import Logo from './Logo';
 
@@ -12,11 +11,14 @@ const Header = ({ title, showHeaderCallout }) => (
         <Logo alt={title} className="Header-logo" />
       </Link>
       <nav className="Header-nav">
-        <a href="/blog">Blog</a>
+        <a href="/blog" className="no-hover">
+          Blog
+        </a>
       </nav>
     </section>
     {showHeaderCallout && (
       <section className="Header-callout">
+        <h2>React Delivery Podcast</h2>
         <p>
           Hey friends! I just released a podcast! It&apos;s all about everything
           that happens after you run <code>create-react-app</code>. I&apos;d
@@ -25,7 +27,6 @@ const Header = ({ title, showHeaderCallout }) => (
           <br />
           <a href="https://react.delivery">Visit react.delivery</a>
         </p>
-        <img src={newsletter} />
       </section>
     )}
   </header>

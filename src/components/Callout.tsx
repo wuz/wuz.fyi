@@ -4,7 +4,7 @@ import './Callout.scss';
 
 import { useTiltRef } from '~utils/tilt';
 
-const Callout = ({ children, color = 'cornflower', to }) => {
+const Callout = ({ children, color = 'trendy', to }) => {
   const calloutRef = useTiltRef();
   if (to.includes('http')) {
     return (

@@ -7,8 +7,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding: $spacing-lg;
-  background: color('lilac');
-  color: color('trendy', $for-background: color('lilac'));
+  background: color('trendy');
+  color: color('trendy', 'text');
   text-align: left;
   border-radius: 4px;
 

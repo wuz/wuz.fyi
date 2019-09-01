@@ -7,7 +7,7 @@ const Logo = ({ className, alt }) => (
         <animate
           attributeName="stop-color"
           values="#FF9AA2; #FFB7B2; #FFDAC1; #E2F0CB; #B5EAD7; #C7CEEA"
-          dur="1s"
+          dur="0.5s"
           repeatCount="indefinite"
         />
       </stop>
@@ -16,7 +16,7 @@ const Logo = ({ className, alt }) => (
         <animate
           attributeName="stop-color"
           values="#C7CEEA; #B5EAD7; #E2F0CB; #FFDAC1; #FFB7B2; #FF9AA2"
-          dur="1s"
+          dur="0.5s"
           repeatCount="indefinite"
         />
       </stop>

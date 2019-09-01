@@ -45,6 +45,14 @@
       border-bottom: 0;
       padding: $spacing-sm $spacing-md;
       border-radius: 2px;
+      text-decoration: none;
+
+      .dark-mode & {
+        color: $color-sky;
+        &:hover {
+          color: $color-inky;
+        }
+      }
 
       &:hover {
         animation: Gradient 1s linear infinite;
@@ -81,29 +89,32 @@
       border: none;
     }
 
-    .dark-mode &:hover {
-      border: 0;
+    .dark-mode & {
+      &:hover {
+        border: 0;
+      }
     }
   }
 
   .Header-callout {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: $main-width;
     color: $color-inky;
     padding: $spacing-md;
     border-radius: 4px;
     background-color: color('sunflower');
-    color: darken(color('sunflower'), 55);
+    color: color('sunflower', 'text');
     position: relative;
     overflow: hidden;
     padding-right: 175px;
 
+    h2 {
+      margin: 0;
+    }
+
     a {
       color: darken(color('sunflower'), 55);
-      border-bottom-color: darken(color('sunflower'), 55);
+      border-bottom-color: color('sunflower', 'text');
     }
 
     img {

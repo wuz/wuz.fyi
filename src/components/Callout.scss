@@ -5,7 +5,7 @@
   padding: $spacing-md;
   border-radius: 4px;
   color: currentColor;
-  border-bottom: 0;
+  border-bottom: 0 !important;
 
   * {
     color: currentColor !important;
@@ -18,10 +18,10 @@
 
 .Callout--lilac {
   background-color: color('lilac');
-  color: darken(color('trendy'), 20) !important;
+  color: color('lilac', 'text') !important;
 }
 
-.Callout--cornflower {
-  background-color: color('cornflower');
-  color: color('jackson') !important;
+.Callout--trendy {
+  background-color: color('trendy');
+  color: color('trendy', 'text') !important;
 }

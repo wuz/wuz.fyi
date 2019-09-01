@@ -12,7 +12,7 @@ class Layout extends React.Component {
       title,
       children,
       hideNewsletter = false,
-      showHeaderCallout = true,
+      showHeaderCallout = false,
     } = this.props;
     return (
       <div className="Container">

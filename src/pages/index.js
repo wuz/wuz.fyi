@@ -6,6 +6,7 @@ import Divider from '../components/Divider';
 import Layout from '../components/layout';
 import List, { ListItem } from '../components/List';
 import Main from '../components/Main';
+import Lead from '../components/Lead';
 import SEO from '../components/seo';
 import Spacer from '../components/Spacer';
 import SubHeading from '../components/SubHeading';
@@ -31,6 +32,19 @@ class Index extends React.Component {
             `accessibility`,
           ]}
         />
+        <section className="u-mw">
+          <Title>
+            Heya, I&apos;m Conlin, but you can{' '}
+            <a href="https://twitter.com/CallMeWuz">call me Wuz</a>.
+          </Title>
+          <Lead>
+            I focus on building performant, accessibility focused frontends at{' '}
+            <a href="https://lessonly.com">Lessonly</a>. In my spare time, you
+            can find me working on <a href="https://stdio.app">stdio.app</a>.{' '}
+            <br />
+            My pronouns are <a href="pronoun.is/he">He/Him</a>
+          </Lead>
+        </section>
         <CalloutContainer>
           <Callout to={posts[0].node.fields.slug}>
             <SubHeading>Most Recent Post</SubHeading>

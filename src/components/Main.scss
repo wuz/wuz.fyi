@@ -7,11 +7,6 @@
   margin: 0 auto;
   padding: $spacing-lg;
   border-radius: 4px;
-  background-color: $color-sky-lighter;
-
-  .dark-mode & {
-    background-color: $color-inky;
-  }
 
   @media screen and (max-width: $breakpoint-sm) {
     padding: $spacing-md;
