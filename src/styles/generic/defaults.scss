@@ -14,6 +14,7 @@ body {
   color: $color-inky-light;
   font-size: 20px;
   line-height: 1.5;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 
   &.dark-mode {
     color: $color-sky-lighter;
@@ -32,6 +33,7 @@ a:not(.no-hover) {
   color: color('trendy', 'text');
   overflow: hidden;
   vertical-align: bottom;
+  transition: color 0.1s ease-in-out;
 
   &:after {
     position: absolute;
