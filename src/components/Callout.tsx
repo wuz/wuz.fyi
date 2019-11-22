@@ -4,17 +4,25 @@ import './Callout.scss';
 
 import { useTiltRef } from '~utils/tilt';
 
-const Callout = ({ children, color = 'trendy', to }) => {
+const Callout = ({ children, color = 'tonic', to }) => {
   const calloutRef = useTiltRef();
   if (to.includes('http')) {
     return (
-      <a href={to} ref={calloutRef} className={`Callout Callout--${color}`}>
+      <a
+        href={to}
+        ref={calloutRef}
+        className={`Callout bg-${color} c-dark-${color}`}
+      >
         {children}
       </a>
     );
   }
   return (
-    <Link to={to} ref={calloutRef} className={`Callout Callout--${color}`}>
+    <Link
+      to={to}
+      ref={calloutRef}
+      className={`Callout bg-${color} c-dark-${color}`}
+    >
       {children}
     </Link>
   );

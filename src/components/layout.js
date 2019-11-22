@@ -8,12 +8,7 @@ import './layout.scss';
 
 class Layout extends React.Component {
   render() {
-    const {
-      title,
-      children,
-      hideNewsletter = false,
-      showHeaderCallout = false,
-    } = this.props;
+    const { title, children, hideNewsletter = false } = this.props;
     return (
       <div className="Container">
         <Helmet
@@ -24,7 +19,7 @@ class Layout extends React.Component {
           <script src="https://unpkg.com/feather-icons" />
           <script src="/dark-mode.js" />
         </Helmet>
-        <Header showHeaderCallout={showHeaderCallout} title={title} />
+        <Header title={title} />
         {children}
         <ColorSwitch />
         <Footer hideNewsletter={hideNewsletter} />

@@ -17,6 +17,12 @@
       "~styles/*": ["src/styles/*"]
     }
   },
-  "exclude": ["node_modules", "public", ".cache"],
+  "exclude": [
+    "node_modules",
+    "public",
+    ".cache",
+    "functions",
+    "functions-build"
+  ],
   "include": ["src/**/*"]
 }

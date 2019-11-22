@@ -41,7 +41,7 @@
 
   .Header-nav {
     a {
-      color: $color-inky;
+      color: color(night);
       border-bottom: 0;
       padding: $spacing-sm $spacing-md;
       border-radius: 2px;
@@ -50,7 +50,7 @@
       .dark-mode & {
         color: $color-sky;
         &:hover {
-          color: $color-inky;
+          color: color(night);
         }
       }
 
@@ -99,11 +99,11 @@
   .Header-callout {
     width: 100%;
     max-width: $main-width;
-    color: $color-inky;
+    color: color(night);
     padding: $spacing-md;
     border-radius: 4px;
     background-color: color('sunflower');
-    color: color('sunflower', 'text');
+    color: darken(color('sunflower'), 5);
     position: relative;
     overflow: hidden;
     padding-right: 175px;
@@ -114,7 +114,7 @@
 
     a {
       color: darken(color('sunflower'), 55);
-      border-bottom-color: color('sunflower', 'text');
+      border-bottom-color: color('sunflower');
     }
 
     img {

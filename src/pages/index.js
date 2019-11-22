@@ -32,7 +32,7 @@ class Index extends React.Component {
             `accessibility`,
           ]}
         />
-        <section className="u-mw">
+        <section className="u-mw p-lg m-p-md">
           <Title>
             Heya, I&apos;m Conlin, but you can{' '}
             <a href="https://twitter.com/CallMeWuz">call me Wuz</a>.
@@ -54,7 +54,7 @@ class Index extends React.Component {
             <br />
             {posts[0].node.frontmatter.description}
           </Callout>
-          <Callout color="lilac" to="https://intriguing-elbow.glitch.me/">
+          <Callout color="strawberry" to="https://intriguing-elbow.glitch.me/">
             <SubHeading>Recent Project</SubHeading>
             Bubblesort animation for named CSS colors
           </Callout>

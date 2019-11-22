@@ -1,5 +1,5 @@
-@import "../styles/ats/tools";
-@import "../styles/ats/settings";
+@import '../styles/ats/tools';
+@import '../styles/ats/settings';
 
 .List {
   margin: 0;
@@ -9,8 +9,8 @@
   .ListItem {
     line-height: 1.5;
     &:before {
-      color: $color-inky-lighter;
-      content: "◼";
+      color: color(night);
+      content: '◼';
       font-size: 0.7em;
       padding-right: 0.3em;
       position: relative;

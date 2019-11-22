@@ -3,8 +3,11 @@
 @import 'ats/tools';
 @import 'ats/settings';
 
-@import 'generic/normalize';
+@import 'generic/reset';
 @import 'generic/defaults';
+@import 'generic/headings';
 @import 'generic/prism';
 
+@import 'utilities/padding';
 @import 'utilities/width';
+@import 'utilities/colors';

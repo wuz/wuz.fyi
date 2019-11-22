@@ -1,3 +1,11 @@
+:root {
+  --mono: 'MONO' 0;
+  --casl: 'CASL' 0;
+  --wght: 'wght' 400;
+  --slnt: 'slnt' 0;
+  --ital: 'ital' 0.5;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,16 +17,18 @@ html {
 }
 
 body {
-  font-family: $main-font;
+  font-family: 'Recursive';
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+    var(--ital);
   background-color: $color-sky-light;
-  color: $color-inky-light;
+  color: color(night);
   font-size: 20px;
   line-height: 1.5;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 
   &.dark-mode {
     color: $color-sky-lighter;
-    background-color: $color-inky;
+    background-color: color(night);
   }
 }
 
@@ -26,11 +36,14 @@ strong {
   font-weight: 700;
 }
 
-a:not(.no-hover) {
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
   display: inline-block;
   position: relative;
-  text-decoration: none;
-  color: color('trendy', 'text');
+  color: darken(color('tonic'), 5);
   overflow: hidden;
   vertical-align: bottom;
   transition: color 0.1s ease-in-out;
@@ -42,10 +55,10 @@ a:not(.no-hover) {
     left: 0;
     content: '';
     width: 100%;
-    height: 0.1em;
+    height: 0.05em;
     background-color: currentColor;
     transform: translateX(-100%);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
   }
 
   &:hover,
@@ -56,7 +69,7 @@ a:not(.no-hover) {
   }
 
   .dark-mode & {
-    color: color('trendy', 'dark-text');
+    color: darken(color('tonic'), 10);
   }
 }
 
@@ -65,7 +78,7 @@ hr {
   border-top: 1px solid $color-sky-dark;
 
   .dark-mode & {
-    border-color: $color-inky-light;
+    border-color: color(night);
   }
 }
 

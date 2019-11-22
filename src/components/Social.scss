@@ -9,7 +9,7 @@
   margin-top: $spacing-lg;
 
   a {
-    color: $color-sky;
+    color: color(tonic);
   }
 
   @media screen and (max-width: $breakpoint-sm) {

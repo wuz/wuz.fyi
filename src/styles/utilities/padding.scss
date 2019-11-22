@@ -1,0 +1,9 @@
+.p-lg {
+  padding: $spacing-lg;
+}
+
+.m-p-md {
+  @media screen and (max-width: $breakpoint-sm) {
+    padding: $spacing-md;
+  }
+}

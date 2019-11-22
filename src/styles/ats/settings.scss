@@ -1,6 +1,6 @@
 @import './colors';
 
-$main-font: 'Public Sans';
+$main-font: 'Recursive';
 
 /* SPACING */
 $unit: 2;
@@ -11,7 +11,7 @@ $spacing-lg: pow($unit, 5) * 1px; // 32px
 $spacing-xl: pow($unit, 6) * 1px; // 64px
 
 /* SHADOWS */
-$shadow-main: 1px 4px 10px rgba($color-inky, 0.25);
+$shadow-main: 1px 4px 10px rgba(color(night), 0.25);
 
 /* BREAKPOINTS */
 $breakpoint-md: 768px;

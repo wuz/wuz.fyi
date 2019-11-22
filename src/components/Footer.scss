@@ -2,12 +2,9 @@
 @import '../styles/ats/settings';
 
 .Footer {
-  padding: $spacing-md;
+  padding: $spacing-xl;
   width: 100%;
   margin: 0 auto;
-  color: $color-sky;
-  background: $color-inky;
-  margin-top: $spacing-xl;
 
   .Footer-content {
     display: flex;
@@ -33,7 +30,7 @@
   .Footer-right {
     transform: translateY(-1 * $spacing-lg);
     min-height: 200px;
-    box-shadow: 0 0 20px rgba($color-inky, 0.2);
+    box-shadow: 0 0 20px rgba(color(night), 0.2);
 
     @media screen and (max-width: $breakpoint-sm) {
       order: -1;
@@ -49,7 +46,7 @@
     font-size: 0.75em;
     margin-top: $spacing-md;
     padding-top: $spacing-md;
-    border-top: 1px solid $color-brand;
+    border-top: 1px solid color(tonic);
     width: 350px;
     max-width: 100%;
 

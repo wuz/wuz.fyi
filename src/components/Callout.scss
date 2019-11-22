@@ -4,24 +4,13 @@
 .Callout {
   padding: $spacing-md;
   border-radius: 4px;
-  color: currentColor;
-  border-bottom: 0 !important;
+  border-bottom: 0;
 
   * {
-    color: currentColor !important;
+    color: currentColor;
   }
 
   &:hover {
     border-bottom: 0;
   }
-}
-
-.Callout--lilac {
-  background-color: color('lilac');
-  color: color('lilac', 'text') !important;
-}
-
-.Callout--trendy {
-  background-color: color('trendy');
-  color: color('trendy', 'text') !important;
 }

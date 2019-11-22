@@ -39,7 +39,7 @@
   font-style: italic;
   font-weight: 500;
   font-size: typescale(3);
-  color: $color-inky-lighter;
+  color: color(night);
 }
 
 .BlogPagination {
@@ -54,28 +54,28 @@
 
 .Post {
   display: block;
-  color: $color-inky;
-  border-bottom: 3px solid $color-inky-light;
+  color: color(night);
+  border-bottom: 3px solid color(night);
   background: $color-sky-lighter;
   margin-bottom: $spacing-lg;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba($color-inky, 0.16);
+  box-shadow: 0 0 10px rgba(color(night), 0.16);
   text-decoration: none;
 
   .dark-mode & {
-    background: $color-inky;
+    background: color(night);
     color: $color-sky-lighter;
     border-bottom: 3px solid $color-sky-dark;
 
     &:hover,
     &:focus {
-      border-bottom: 3px solid $color-brand;
+      border-bottom: 3px solid color(tonic);
     }
   }
 
   &:hover,
   &:focus {
-    border-bottom: 3px solid $color-brand;
+    border-bottom: 3px solid color(tonic);
   }
 
   .Post-cover {
@@ -115,7 +115,7 @@
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid $color-brand;
+    border-left: 4px solid color(tonic);
     margin: 0;
     padding: $spacing-sm;
     margin-bottom: $spacing-md;
@@ -137,7 +137,7 @@
     border-radius: 2px;
 
     .dark-mode & {
-      background: lighten($color-inky-dark, 5);
+      background: lighten(color(night), 5);
     }
 
     @media screen and (max-width: $breakpoint-sm) {

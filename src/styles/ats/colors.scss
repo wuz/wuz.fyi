@@ -1,34 +1,16 @@
 $colors: (
-  'lilac': (
-    'base': #dfbcff,
-    'text': darken(#dfbcff, 30),
-  ),
-  'glacier': (
-    'base': #7ab7c9,
-  ),
-  'cornflower': (
-    'base': #5c95ff,
-  ),
-  'trendy': (
-    'base': #c7ceea,
-    'dim': rgba(desaturate(#c7ceea, 30), 0.75),
-    'text': darken(#c7ceea, 40),
-    'dark-text': darken(#c7ceea, 20),
-  ),
-  'jackson': (
-    'base': #1c3a9a,
-  ),
-  'sunflower': (
-    'base': #ffdac1,
-    'text': desaturate(darken(#ffdac1, 40), 20),
-  ),
+  'sand': #e2d4b7,
+  'cream': #f2e9de,
+  'deep': #3a606e,
+  'forest': #607b7d,
+  'strawberry': #da667b,
+  'tonic': #70a9a1,
+  'night': #0e161a,
+  'stone': #424154,
+  'rain': #d1d5d6,
+  'cloud': #efefef,
+  'sunflower': #ffdac1,
 );
-
-$c1: #ff9aa2;
-$c2: #ffb7b2;
-$c3: #ffdac1;
-$c4: #e2f0cb;
-$c5: #b5ead7;
 
 $color-inky-lighter: #7d8b98;
 $color-inky-light: #2a2d46;
@@ -41,13 +23,3 @@ $color-sky-light: #f8f9fb;
 $color-sky: #eff0f6;
 $color-sky-dark: #e2e4ee;
 $color-sky-darker: #c1c3cc;
-
-$color-brand-darker: darken(#5c95ff, 50);
-$color-brand-dark: darken(#5c95ff, 30);
-$color-brand: #5c95ff;
-$color-brand-dim: rgba(#5c95ff, 0.5);
-
-$color-brand-purple-darker: darken(#dfbcff, 20);
-$color-brand-purple-dark: darken(#dfbcff, 10);
-$color-brand-purple: #dfbcff;
-$color-brand-purple-dim: rgba(#dfbcff, 0.5);

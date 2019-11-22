@@ -1,0 +1,13 @@
+@each $color, $hex in $colors {
+  .c-#{$color} {
+    color: $hex;
+  }
+
+  .c-dark-#{$color} {
+    color: darken($hex, 40);
+  }
+
+  .bg-#{$color} {
+    background-color: $hex;
+  }
+}
