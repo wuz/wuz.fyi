@@ -1,6 +1,6 @@
 ---
 cover_image: /assets/photo-1510817992534-083ab932fd30.jpg
-date: 2019-11-23T00:10:14.789Z
+date: 2019-07-10T23:10:14.789Z
 title: The Radar Gun Problem
 description: When `console.log` goes wrong
 ---
