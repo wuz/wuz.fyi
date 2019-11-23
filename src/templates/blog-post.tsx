@@ -8,11 +8,9 @@ import SEO from '~components/seo';
 import SubHeading from '~components/SubHeading';
 import Title from '~components/Title';
 import WordCount from '~components/WordCount';
-import { useTiltRef } from '~utils/tilt';
 
 const BlogPostTemplate = props => {
   const postRef = useRef();
-  const imageRef = useTiltRef();
   const { data, pageContext, location } = props;
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
@@ -29,13 +27,9 @@ const BlogPostTemplate = props => {
       />
       <header className="BlogHeader">
         {post.frontmatter.cover_image && (
-          <div className="CoverImage" ref={imageRef}>
+          <div className="CoverImage">
             <img alt="" src={post.frontmatter.cover_image} />
           </div>
-        )}
-
-        {post.frontmatter.series && (
-          <SubHeading>{post.frontmatter.series}:</SubHeading>
         )}
         <Title>{post.frontmatter.title}</Title>
         <small className="PostMeta">
@@ -82,11 +76,9 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
-        series
         date(formatString: "MMMM DD, YYYY")
-        description
         cover_image
-        tags
+        description
       }
       fields {
         slug

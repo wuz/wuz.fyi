@@ -12,8 +12,8 @@
   border-left: 1px solid color(night);
 
   .dark-mode & {
-    color: $color-sky-darker;
-    border-left: 1px solid $color-sky-darker;
+    color: color(rain);
+    border-left: 1px solid color(rain);
   }
 
   h1,

@@ -22,13 +22,16 @@
   transform: rotate(0);
   transition: 0.3s;
   margin-bottom: $spacing-md;
+
   img {
     width: 100%;
-    // transform: translateY(-100px);
-  }
+    filter: sepia(1);
+    transform: translateY(-100px);
+    transition: filter 0.3s;
 
-  &:hover {
-    transform: rotateX(20deg);
+    &:hover {
+      filter: sepia(0);
+    }
   }
 }
 
@@ -40,6 +43,10 @@
   font-weight: 500;
   font-size: typescale(3);
   color: color(night);
+
+  .dark-mode & {
+    color: color(cloud);
+  }
 }
 
 .BlogPagination {
@@ -56,7 +63,7 @@
   display: block;
   color: color(night);
   border-bottom: 3px solid color(night);
-  background: $color-sky-lighter;
+  background: color(cloud);
   margin-bottom: $spacing-lg;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(color(night), 0.16);
@@ -64,12 +71,12 @@
 
   .dark-mode & {
     background: color(night);
-    color: $color-sky-lighter;
-    border-bottom: 3px solid $color-sky-dark;
+    color: color(cloud);
+    border-bottom: 3px solid color(stone);
 
     &:hover,
     &:focus {
-      border-bottom: 3px solid color(tonic);
+      border-bottom: 3px solid color(deep);
     }
   }
 
@@ -131,7 +138,7 @@
     max-width: 50vw;
     width: 100%;
     text-align: center;
-    background: lighten($color-sky-dark, 5);
+    background: lighten(color(stone), 5);
     margin: $spacing-sm auto;
     padding: $spacing-md;
     border-radius: 2px;

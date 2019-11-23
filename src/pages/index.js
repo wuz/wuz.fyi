@@ -38,11 +38,8 @@ class Index extends React.Component {
             <a href="https://twitter.com/CallMeWuz">call me Wuz</a>.
           </Title>
           <Lead>
-            I focus on building performant, accessibility focused frontends at{' '}
-            <a href="https://lessonly.com">Lessonly</a>. In my spare time, you
-            can find me working on <a href="https://stdio.app">stdio.app</a>.{' '}
-            <br />
-            My pronouns are <a href="pronoun.is/he">He/Him</a>
+            Software engineer building performant, accessible frontends and
+            hacking on new ideas.
           </Lead>
         </section>
         <CalloutContainer>
@@ -60,47 +57,50 @@ class Index extends React.Component {
           </Callout>
         </CalloutContainer>
         <Main>
-          <Spacer size="md" />
           <Title>About Me</Title>
           <SubHeading>Current Interests</SubHeading>
+
           <List>
             <ListItem>
               <a href="https://stdio.app">stdio</a> - A community for human
               engineers
             </ListItem>
           </List>
-          <Divider />
-          <SubHeading>Recent Writing</SubHeading>
-          <List>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug;
-              return (
-                <ListItem key={node.fields.slug}>
-                  <Link to={node.fields.slug}>{title}</Link>
-                </ListItem>
-              );
-            })}
-          </List>
-          <Link to="/blog">More Writings</Link>
-          <Divider />
-          <SubHeading>About Me</SubHeading>
-          <Text>
-            building frontends at <a href="https://lessonly.com">Lessonly</a>
-            <br />
-            <small>
-              Previously at <a href="https://mimirhq.com">Mimir</a>
-            </small>
-          </Text>
-          <Divider />
-          <SubHeading>Projects</SubHeading>
-          <Text>
-            built <a href="https://dankneon.com">Dank Neon</a>,{' '}
-            <a href="https://botsin.space/@ajjbot">AJJ Bot</a>,{' '}
-            <a href="https://picdance.party">Picdance</a>, and{' '}
-            <a href="https://github.com/wuz/all_google_fonts">
-              all google fonts
-            </a>
-          </Text>
+          <div>
+            <SubHeading>Recent Writing</SubHeading>
+            <List>
+              {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug;
+                return (
+                  <ListItem key={node.fields.slug}>
+                    <Link to={node.fields.slug}>{title}</Link>
+                  </ListItem>
+                );
+              })}
+            </List>
+            <Link to="/blog">More Writings</Link>
+          </div>
+          <div>
+            <SubHeading>About Me</SubHeading>
+            <Text>
+              building frontends at <a href="https://lessonly.com">Lessonly</a>
+              <br />
+              <small>
+                Previously at <a href="https://mimirhq.com">Mimir</a>
+              </small>
+            </Text>
+          </div>
+          <div>
+            <SubHeading>Projects</SubHeading>
+            <Text>
+              built <a href="https://dankneon.com">Dank Neon</a>,{' '}
+              <a href="https://botsin.space/@ajjbot">AJJ Bot</a>,{' '}
+              <a href="https://picdance.party">Picdance</a>, and{' '}
+              <a href="https://github.com/wuz/all_google_fonts">
+                all google fonts
+              </a>
+            </Text>
+          </div>
           <Spacer size="md" />
           <Text>
             founded <a href="https://www.f6s.com/tebogollc">Tebogo</a> once upon
@@ -121,11 +121,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
-      limit: 4
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 4) {
       edges {
         node {
           fields {

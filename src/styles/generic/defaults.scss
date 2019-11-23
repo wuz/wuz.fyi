@@ -20,14 +20,14 @@ body {
   font-family: 'Recursive';
   font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
     var(--ital);
-  background-color: $color-sky-light;
+  background-color: color(cloud);
   color: color(night);
   font-size: 20px;
   line-height: 1.5;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 
   &.dark-mode {
-    color: $color-sky-lighter;
+    color: color(cloud);
     background-color: color(night);
   }
 }
@@ -69,13 +69,15 @@ a:not([class]) {
   }
 
   .dark-mode & {
-    color: darken(color('tonic'), 10);
+    color: lighten(color('tonic'), 10);
   }
 }
 
 hr {
   border: 0;
-  border-top: 1px solid $color-sky-dark;
+  border-top: 1px solid color(tonic);
+  width: 85%;
+  margin: 1em auto;
 
   .dark-mode & {
     border-color: color(night);
@@ -92,4 +94,10 @@ a.no-border {
 
 label {
   font-size: 0.75em;
+}
+
+strong {
+  --wght: 'wght' 600;
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+    var(--ital);
 }

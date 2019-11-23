@@ -12,7 +12,8 @@ I recently saw this awesome post from [bnb](https://dev.to/bnb) on Twitter:
 
 <Tweet tweetId="1075473070368919552" />
 
-The community response has been awesome and I quickly knew I wanted to make my own:
+The community response has been awesome and I quickly knew I wanted to make my
+own:
 
 <Tweet tweetId="1075789700898664450" />
 
@@ -24,7 +25,8 @@ First, let's clone the repo:
 git clone https://github.com/bnb/bitandbang
 ```
 
-Now, we need to edit some stuff. First, let's open up the `package.json` and update some of the details. First, change the package name:
+Now, we need to edit some stuff. First, let's open up the `package.json` and
+update some of the details. First, change the package name:
 
 ```
 name: <your username>
@@ -32,9 +34,11 @@ name: <your username>
 
 This will let you publish to npm and get your card with `npx <your_username>`.
 
-You can also update the description and author fields to reflect your information.
+You can also update the description and author fields to reflect your
+information.
 
-If we run `npm run dev`, we'll see that Tierney's information shows up. Let's make it your card.
+If we run `npm run dev`, we'll see that Tierney's information shows up. Let's
+make it your card.
 
 Open up `build.js`:
 
@@ -117,7 +121,8 @@ fs.writeFileSync(
 );
 ```
 
-Play around with the `data` const and add your information. For me it would look like this:
+Play around with the `data` const and add your information. For me it would look
+like this:
 
 ```js
 const data = {
@@ -127,7 +132,7 @@ const data = {
   twitter: chalk.redBright('https://twitter.com/CallMeWuz'),
   github: chalk.redBright('https://github.com/wuz'),
   linkedin: chalk.redBright('https://linkedin.com/in/wuz'),
-  web: chalk.redBright('https://wuz.fyi'),
+  web: chalk.redBright('https://wuz.sh'),
   npx: chalk.white('npx wuz'),
   labelWork: chalk.white.bold('      Work:'),
   labelTwitter: chalk.white.bold('   Twitter:'),
@@ -138,12 +143,19 @@ const data = {
 };
 ```
 
-You can play with the colors as much as you like - check out the [chalk](https://npmjs.org/package/chalk) package for more options.
+You can play with the colors as much as you like - check out the
+[chalk](https://npmjs.org/package/chalk) package for more options.
 
-Once you are done, run `npm run dev` again. If everything looks good, we are ready to publish to NPM.
+Once you are done, run `npm run dev` again. If everything looks good, we are
+ready to publish to NPM.
 
-If you don't have an NPM account, [go make one!](https://npmjs.org) Once you have you account set up, run `npm login` and follow the prompt to login to your account. Once that is done, go ahead and run an `npm publish`. Make sure your have changed the package name.
+If you don't have an NPM account, [go make one!](https://npmjs.org) Once you
+have you account set up, run `npm login` and follow the prompt to login to your
+account. Once that is done, go ahead and run an `npm publish`. Make sure your
+have changed the package name.
 
-If everything is set up right, you should see a success message! Try running `npx <your_username>`.
+If everything is set up right, you should see a success message! Try running
+`npx <your_username>`.
 
-Once you get it done, take a screenshot and send it to me here or [on Twitter](https://twitter.com/CallMeWuz) - I'd love to see it!
+Once you get it done, take a screenshot and send it to me here or
+[on Twitter](https://twitter.com/CallMeWuz) - I'd love to see it!

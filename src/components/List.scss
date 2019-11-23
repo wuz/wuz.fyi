@@ -15,6 +15,10 @@
       padding-right: 0.3em;
       position: relative;
       top: -0.25em;
+
+      .dark-mode & {
+        color: color(cloud);
+      }
     }
   }
 }

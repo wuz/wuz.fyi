@@ -19,6 +19,10 @@
 }
 
 .Container {
-  background: color(cream);
+  background-color: color(cream);
   margin: $spacing-md;
+
+  .dark-mode & {
+    background-color: color(stone);
+  }
 }

@@ -10,4 +10,24 @@
   .bg-#{$color} {
     background-color: $hex;
   }
+
+  .fill-#{$color} {
+    fill: $hex;
+  }
+
+  .stroke-#{$color} {
+    stroke: $hex;
+  }
+
+  .dm-fill-#{$color} {
+    .dark-mode & {
+      fill: $hex;
+    }
+  }
+
+  .dm-stroke-#{$color} {
+    .dark-mode & {
+      stroke: $hex;
+    }
+  }
 }

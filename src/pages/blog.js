@@ -23,6 +23,7 @@ class BlogIndex extends React.Component {
                 key={node.fields.slug}
                 className="Post"
               >
+                {console.log(node.frontmatter)}
                 {node.frontmatter.cover_image && (
                   <img
                     src={node.frontmatter.cover_image}
@@ -57,10 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -69,9 +67,9 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            cover_image
             title
             description
-            cover_image
           }
         }
       }

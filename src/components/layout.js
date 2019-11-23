@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import favicon from '../../content/assets/favicon.png';
+import favicon from '../../assets/favicon.png';
 import ColorSwitch from './ColorSwitch';
 import Footer from './Footer';
 import Header from './Header';

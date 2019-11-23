@@ -2,9 +2,7 @@
 @import '../styles/ats/settings';
 
 .Footer {
-  padding: $spacing-xl;
   width: 100%;
-  margin: 0 auto;
 
   .Footer-content {
     display: flex;
@@ -13,69 +11,102 @@
     width: 100%;
     max-width: $main-width;
     margin: 0 auto;
-
-    @media screen and (max-width: $breakpoint-sm) {
-      flex-direction: column;
-      text-align: center;
-    }
+    padding: $spacing-lg;
   }
 
-  .Footer-left {
-    width: 80%;
-    @media screen and (max-width: $breakpoint-sm) {
-      width: 100%;
-    }
-  }
-
-  .Footer-right {
-    transform: translateY(-1 * $spacing-lg);
-    min-height: 200px;
-    box-shadow: 0 0 20px rgba(color(night), 0.2);
-
-    @media screen and (max-width: $breakpoint-sm) {
-      order: -1;
-      margin-bottom: -1 * $spacing-md;
-    }
-  }
-
-  .Footer-signature {
-    height: 100px;
+  a {
+    border-bottom: 0;
   }
 
   .Footer-copyright {
-    font-size: 0.75em;
-    margin-top: $spacing-md;
-    padding-top: $spacing-md;
-    border-top: 1px solid color(tonic);
-    width: 350px;
-    max-width: 100%;
+    display: flex;
+    align-items: center;
 
-    @media screen and (max-width: $breakpoint-sm) {
-      margin: 0;
+    > div {
+      margin-right: 1em;
     }
 
-    .Footer-licenseLink {
-      margin-bottom: $spacing-sm;
-      display: block;
-    }
-
-    .Footer-badges {
-      display: flex;
-      align-items: center;
-      vertical-align: middle;
-      a {
-        margin: 6px 4px 0 4px;
-        padding: 0;
-        height: 100%;
-      }
-
-      @media screen and (max-width: $breakpoint-sm) {
-        flex-direction: column;
-      }
-    }
-
-    a {
-      border-bottom: 0;
+    & a:after {
+      content: none;
     }
   }
 }
+
+// .Footer {
+//   padding: $spacing-xl;
+//   width: 100%;
+//   margin: 0 auto;
+
+//   .Footer-content {
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: space-between;
+//     width: 100%;
+//     max-width: $main-width;
+//     margin: 0 auto;
+
+//     @media screen and (max-width: $breakpoint-sm) {
+//       flex-direction: column;
+//       text-align: center;
+//     }
+//   }
+
+//   .Footer-left {
+//     width: 80%;
+//     @media screen and (max-width: $breakpoint-sm) {
+//       width: 100%;
+//     }
+//   }
+
+//   .Footer-right {
+//     transform: translateY(-1 * $spacing-lg);
+//     min-height: 200px;
+//     box-shadow: 0 0 20px rgba(color(night), 0.2);
+
+//     @media screen and (max-width: $breakpoint-sm) {
+//       order: -1;
+//       margin-bottom: -1 * $spacing-md;
+//     }
+//   }
+
+//   .Footer-signature {
+//     height: 100px;
+//   }
+
+//   .Footer-copyright {
+//     font-size: 0.75em;
+//     margin-top: $spacing-md;
+//     padding-top: $spacing-md;
+//     border-top: 1px solid color(tonic);
+//     width: 350px;
+//     max-width: 100%;
+
+//     @media screen and (max-width: $breakpoint-sm) {
+//       margin: 0;
+//     }
+
+//     .Footer-licenseLink {
+//       margin-bottom: $spacing-sm;
+//       display: block;
+//     }
+
+//     .Footer-badges {
+//       display: flex;
+//       align-items: center;
+//       vertical-align: middle;
+//       a {
+//         margin: 6px 4px 0 4px;
+//         padding: 0;
+//         height: 100%;
+//       }
+
+//       @media screen and (max-width: $breakpoint-sm) {
+//         flex-direction: column;
+//       }
+//     }
+
+//     a {
+//       border-bottom: 0;
+//     }
+//   }
+// }
