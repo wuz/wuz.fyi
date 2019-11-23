@@ -1,6 +1,6 @@
 ---
 cover_image: /assets/vmlpyk5wgzw1b85g4j1f.jpg
-date: 2019-11-23T00:10:14.789Z
+date: 2018-12-19T00:10:14.789Z
 title: 'Stop trying to be so DRY, instead Write Everything Twice (WET)'
 description: 'Write everything twice, just not a third time.'
 ---
