@@ -238,6 +238,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.5.tgz#02f077ac8817d3df4a832ef59de67565e71cca4b"
   integrity sha512-E5BN68cqR7dhKan1SfqgPGhQ178bkVKpXTPEXnFJBrEt8/DKRZlybmy+IgYLTeN7tp1R5Ccmbm2rBk17sHYU3g==
 
+"@babel/parser@^7.2.3":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.4.tgz#75ab2d7110c2cf2fa949959afb05fa346d2231bb"
+  integrity sha512-jIwvLO0zCL+O/LmEJQjWA75MQTWwx3c3u2JOTDK5D3/9egrWRRA0/0hk9XXywYnXZVVpzrBYeIQTmhwUaePI9g==
+
 "@babel/plugin-proposal-async-generator-functions@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.2.0.tgz#b289b306669dce4ad20b0252889a15768c9d417e"
@@ -1767,12 +1772,22 @@ accepts@^1.3.7, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
+acorn-dynamic-import@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
+  integrity sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==
+
 acorn-jsx@^5.0.0:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.0.2.tgz#84b68ea44b373c4f8686023a551f61a21b7c4a4f"
   integrity sha512-tiNTrP1MP0QrChmD2DdupCr6HWSFeKVw5d/dHTu4Y7rkAkRhU/Dt7dphAfIUyxtHpl/eBVip5uTNSpQJHylpAw==
 
-acorn@^6.0.7, acorn@^6.2.1:
+acorn-jsx@^5.0.1:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.1.0.tgz#294adb71b57398b0680015f0a38c563ee1db5384"
+  integrity sha512-tMUqwBWfLFbJbizRmEcWSLw6HnFzfdJs2sOJEOwwtVPMoH/0Ay+E703oZz78VSXZiiDcZrQ5XKjPIUQixhmgVw==
+
+acorn@^6.0.7, acorn@^6.1.1, acorn@^6.2.1:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.3.0.tgz#0087509119ffa4fc0a0041d1e93a417e68cb856e"
   integrity sha512-/czfa8BwS88b9gWQVhc8eknunSA2DoJpJyTQkhheIf5E48u1N0R4q/YxxsAeqRrmK9TQ/uYfgLDfZo91UlANIA==
@@ -2816,6 +2831,20 @@ btoa-lite@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/btoa-lite/-/btoa-lite-1.0.0.tgz#337766da15801210fdd956c22e9c6891ab9d0337"
   integrity sha1-M3dm2hWAEhD92VbCLpxokaudAzc=
+
+buble@^0.19.6:
+  version "0.19.8"
+  resolved "https://registry.yarnpkg.com/buble/-/buble-0.19.8.tgz#d642f0081afab66dccd897d7b6360d94030b9d3d"
+  integrity sha512-IoGZzrUTY5fKXVkgGHw3QeXFMUNBFv+9l8a4QJKG1JhG3nCMHTdEX1DCOg8568E2Q9qvAQIiSokv6Jsgx8p2cA==
+  dependencies:
+    acorn "^6.1.1"
+    acorn-dynamic-import "^4.0.0"
+    acorn-jsx "^5.0.1"
+    chalk "^2.4.2"
+    magic-string "^0.25.3"
+    minimist "^1.2.0"
+    os-homedir "^2.0.0"
+    regexpu-core "^4.5.4"
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -8647,6 +8676,11 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.6.tgz#c40382aac9506e7d1f2d856eb02f6c7b2a98b37c"
   integrity sha512-MUj2XlMB8kpe+8DJUGH/3UJm4XpI8XEgZQ+CiHDeyrGoKPdW/8FJv6ku+3UiYm5Fz3CWaL+iXmD8Q4Ap6aC1Jw==
 
+jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-base64@^2.1.8, js-base64@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
@@ -9285,6 +9319,13 @@ ltcdr@^2.2.1:
   resolved "https://registry.yarnpkg.com/ltcdr/-/ltcdr-2.2.1.tgz#5ab87ad1d4c1dab8e8c08bbf037ee0c1902287cf"
   integrity sha1-Wrh60dTB2rjowIu/A37gwZAih88=
 
+magic-string@^0.25.3:
+  version "0.25.4"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.4.tgz#325b8a0a79fc423db109b77fd5a19183b7ba5143"
+  integrity sha512-oycWO9nEVAP2RVPbIoDoA4Y7LFIJ3xRYov93gAyJhZkET1tNuB0u7uWkZS2LpBWTJUWnmau/To8ECWRC+jKNfw==
+  dependencies:
+    sourcemap-codec "^1.4.4"
+
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -9515,6 +9556,18 @@ mdurl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
+
+mdx-scoped-runtime@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/mdx-scoped-runtime/-/mdx-scoped-runtime-0.7.4.tgz#adda879ee28b549491c148b0591d59a82ba2bd0c"
+  integrity sha512-ASEtkUKKh4DM2DONiXRpDpTESKyER/iFGKc6Z6iHGf8vGIsbBF2lM8lhEAnrv9/gLzis18sXYIiXNvSt5bjB0Q==
+  dependencies:
+    "@babel/parser" "^7.2.3"
+    "@mdx-js/mdx" "^0.20.3"
+    "@mdx-js/tag" "^0.20.3"
+    buble "^0.19.6"
+    prop-types "^15.7.2"
+    unist-util-remove "^1.0.1"
 
 meant@^1.0.1:
   version "1.0.1"
@@ -10072,6 +10125,19 @@ netlify-cms-lib-util@^2.3.3:
     js-sha256 "^0.9.0"
     localforage "^1.7.3"
 
+netlify-cms-media-library-cloudinary@^1.3.3:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-cloudinary/-/netlify-cms-media-library-cloudinary-1.3.4.tgz#ef8aa18ff85d4f1957a5ce4ca89799cda3334ec1"
+  integrity sha512-ujVXy1nhvYISf6Fs/UGgCWEchbEHlrpkBpwFfVdGyOpKanimmVRlqceMPzsLJbnmB2STCPWCG7vOnmvd0hZ7kw==
+
+netlify-cms-media-library-uploadcare@^0.5.3:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-uploadcare/-/netlify-cms-media-library-uploadcare-0.5.5.tgz#295e0f5d01c0029df9e5ec03649c76a2f92fc12f"
+  integrity sha512-+pH6UKXD7nuF+WUX3C/Tk0X0vcKHndl4vZJQCdojqtk+PrOBk3VXri5XJkJd2xFUtksdprCRaKPvB2RKbuolEQ==
+  dependencies:
+    uploadcare-widget "^3.7.0"
+    uploadcare-widget-tab-effects "^1.4.0"
+
 netlify-cms-ui-default@^2.6.4:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/netlify-cms-ui-default/-/netlify-cms-ui-default-2.6.4.tgz#b406aaaac63136bd92c00b587f85348bb829b50e"
@@ -10148,6 +10214,16 @@ netlify-cms-widget-markdown@^2.5.1:
     unist-builder "^1.0.2"
     unist-util-visit-parents "^1.1.1"
 
+netlify-cms-widget-mdx@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-mdx/-/netlify-cms-widget-mdx-0.4.3.tgz#f938fcee9bf6c681d8feae00b8088157cf8dff6a"
+  integrity sha512-YVlLIjOQNIMt51uogSgqRyNZuZDO24LJR9PaALx041X1/H5AFG1ZTAJMDDHBHQAr0HkSuY+tVjekKvpVMmTNvQ==
+  dependencies:
+    mdx-scoped-runtime "^0.7.4"
+    netlify-cms-ui-default "^2.6.4"
+    netlify-cms-widget-markdown "^2.5.1"
+    prop-types "^15.7.2"
+
 netlify-cms-widget-number@^2.3.4:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-number/-/netlify-cms-widget-number-2.3.5.tgz#32348c6bbb8db0f97ff014611b839afd5aec5a5d"
@@ -10183,6 +10259,17 @@ netlify-cms-widget-text@^2.2.3:
   integrity sha512-uMMq5/2n3ISSnm3+qOEq5QFAId7MooTIOl6v/jVZZTPPxFYk6ko9DjGdhjGf/WwACoGD/XzMruZAXwZ3pv3LAQ==
   dependencies:
     react-textarea-autosize "^7.1.0"
+
+netlify-cms@^2.9.7:
+  version "2.9.7"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.9.7.tgz#5211e8116811119aeeb5cf24783f2d4f58d006ba"
+  integrity sha512-l7rm06lHi5UTXW8XwOTDFi82chwiJL0NgJ1ixIb4EUDuW14VEfLUkDoaX+YX+MWEKm1UriwDeIe42/AXRNFJFQ==
+  dependencies:
+    netlify-cms-app "^2.9.7"
+    netlify-cms-media-library-cloudinary "^1.3.3"
+    netlify-cms-media-library-uploadcare "^0.5.3"
+    react "^16.8.4"
+    react-dom "^16.8.4"
 
 netlify-identity-widget@^1.5.5:
   version "1.5.5"
@@ -10771,6 +10858,11 @@ os-homedir@^1.0.0, os-homedir@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
   integrity sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
+
+os-homedir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-2.0.0.tgz#a0c76bb001a8392a503cbd46e7e650b3423a923c"
+  integrity sha512-saRNz0DSC5C/I++gFIaJTXoFJMRwiP5zHar5vV3xQ2TkgEw6hDCcU5F272JjUylpiVgBrZNQHnfjkLabTfb92Q==
 
 os-locale@^1.4.0:
   version "1.4.0"
@@ -14068,6 +14160,11 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+sourcemap-codec@^1.4.4:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.6.tgz#e30a74f0402bad09807640d39e971090a08ce1e9"
+  integrity sha512-1ZooVLYFxC448piVLBbtOxFcXwnymH9oUF8nRd3CuYDVvkRBxRl6pB4Mtas5a4drtL+E8LDgFkQNcgIw6tc8Hg==
+
 space-separated-tokens@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.4.tgz#27910835ae00d0adfcdbd0ad7e611fb9544351fa"
@@ -15336,6 +15433,18 @@ update-notifier@^2.5.0:
     latest-version "^3.0.0"
     semver-diff "^2.0.0"
     xdg-basedir "^3.0.0"
+
+uploadcare-widget-tab-effects@^1.4.0:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/uploadcare-widget-tab-effects/-/uploadcare-widget-tab-effects-1.4.6.tgz#ca806e693f37c5a8af017af3e5ca55f678fab265"
+  integrity sha512-83Nu4w1rmWnQWpD14cM5HczmpZX326MwQbhVhfBhDt9mQtd2PxOCZbgaxq03YP6Cbrs87U6V1IokP7UkJRjcfw==
+
+uploadcare-widget@^3.7.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.8.0.tgz#4a505689ba8d2ec79f7d1879da3d4459294b9d67"
+  integrity sha512-Mgd8L9OVryWifg7nlbm3c1xO6XgBHtuiVkwHkoAy9TivrFItwFvDXC7aAI7mwNJ0umB+URw4/1qJ3Xu9PEbkVw==
+  dependencies:
+    jquery "^3.4.1"
 
 upper-case-first@^1.1.0, upper-case-first@^1.1.2:
   version "1.1.2"

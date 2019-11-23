@@ -8,6 +8,10 @@ import SEO from '~components/seo';
 import SubHeading from '~components/SubHeading';
 import Title from '~components/Title';
 import WordCount from '~components/WordCount';
+import CMS from 'netlify-cms';
+import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
+
+CMS.registerWidget('mdx', MdxControl, MdxPreview);
 
 const BlogPostTemplate = props => {
   const postRef = useRef();
