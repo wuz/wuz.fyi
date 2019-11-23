@@ -8,8 +8,8 @@ collections:
     label: Blog
     folder: blog
     create: true
-    format: frontmatter
     extension: mdx
+    format: frontmatter
     fields:
       - { name: cover_image, label: Cover Image, widget: image }
       - { name: date, label: Date, widget: datetime }
