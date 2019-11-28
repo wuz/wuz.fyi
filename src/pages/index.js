@@ -2,7 +2,6 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import Callout from '../components/Callout';
 import CalloutContainer from '../components/CalloutContainer';
-import Divider from '../components/Divider';
 import Layout from '../components/layout';
 import List, { ListItem } from '../components/List';
 import Main from '../components/Main';
@@ -12,6 +11,7 @@ import Spacer from '../components/Spacer';
 import SubHeading from '../components/SubHeading';
 import Text from '../components/Text';
 import Title from '../components/Title';
+import Popover from '../components/Popover';
 
 class Index extends React.Component {
   render() {
@@ -39,7 +39,23 @@ class Index extends React.Component {
           </Title>
           <Lead>
             Software engineer building performant, accessible frontends and
-            hacking on new ideas.
+            hacking on new ideas in Indianapolis
+            <Popover
+              title={
+                <>
+                  Indianapolis is on the traditional territory of the Miami
+                  nation.{' '}
+                  <a
+                    className="underlined c-sunflower"
+                    href="https://native-land.ca/territory-acknowledgement/"
+                  >
+                    Learn more.
+                  </a>
+                </>
+              }
+            >
+              <super>*</super>
+            </Popover>
           </Lead>
         </section>
         <CalloutContainer>

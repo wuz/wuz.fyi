@@ -8,6 +8,7 @@ import SEO from '~components/seo';
 import SubHeading from '~components/SubHeading';
 import Title from '~components/Title';
 import WordCount from '~components/WordCount';
+import Lead from '~components/Lead';
 
 const BlogPostTemplate = props => {
   const postRef = useRef();

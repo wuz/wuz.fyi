@@ -1,0 +1,28 @@
+@import '~styles/ats/tools';
+@import '~styles/ats/settings';
+
+.Popover {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  cursor: pointer;
+
+  &.Popover--hovered {
+    .Popover-title {
+      display: block;
+    }
+  }
+
+  .Popover-title {
+    position: absolute;
+    bottom: 95%;
+    left: 50%;
+    display: none;
+    width: auto;
+    white-space: nowrap;
+    min-height: 40px;
+    padding: 10px 15px;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 0px lighten(color(forest), 10);
+  }
+}

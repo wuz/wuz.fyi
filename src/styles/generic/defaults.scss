@@ -41,9 +41,14 @@ a {
 }
 
 a:not([class]) {
+  color: darken(color('tonic'), 5);
+}
+
+a:not([class]),
+a.underlined {
   display: inline-block;
   position: relative;
-  color: darken(color('tonic'), 5);
+
   overflow: hidden;
   vertical-align: bottom;
   transition: color 0.1s ease-in-out;
@@ -66,10 +71,6 @@ a:not([class]) {
     &:after {
       transform: translateX(0);
     }
-  }
-
-  .dark-mode & {
-    color: lighten(color('tonic'), 10);
   }
 }
 
